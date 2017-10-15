@@ -17,8 +17,9 @@
   <ion-grid>
     <ion-row >
       <ion-col *ngFor="let m of movies" col-4 class="showing">
-        <img src=".src/pic/"/>
+        <img src="pic/{{m.pic}}">
         {{m.nameTh}}
+        {{m.nameEn}}
       </ion-col>
     </ion-row>
   </ion-grid>
