@@ -16,11 +16,10 @@
 <ion-content padding>
   <ion-grid class="grid">
     <ion-row >
-      <ion-col *ngFor="let m of movies" col-4 class="showing">
+      <ion-col *ngFor="let m of movies" col-4 >
         <img src="pic/{{m.pic}}" class="picMovie">
-        {{m.Date}} <br>
-        {{m.nameTh}}
-       
+        <div class="date">{{m.Date}}</div> 
+        <div class="showing">{{m.nameTh}}</div>
       </ion-col>
     </ion-row>
   </ion-grid>
