@@ -11,6 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { HttpModule } from '@angular/http';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { DataProvider } from '../providers/data/data';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DataProvider,
  
   ]
 })
