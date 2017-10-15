@@ -14,9 +14,11 @@
 
 
 <ion-content padding>
-  <ion-card *ngFor="let t of theaterDetail">
-    <div>{{t.tell}}</div>
-   
-
-  </ion-card>
+  <ion-list>
+    
+    <ion-item *ngFor="let t of theaterDetail" class="theaterList" no-lines>
+      <ion-icon name="ios-star-outline" ></ion-icon>
+      {{t.name}}
+    </ion-item>
+  </ion-list>
 </ion-content>
