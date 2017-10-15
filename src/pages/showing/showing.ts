@@ -16,7 +16,7 @@ import { DataProvider } from '../../providers/data/data' ;
 export class ShowingPage {
   movies: Array<any> = [];
 
-  constructor(private data:DataProvider, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private data:DataProvider) {
     this.movies = data.getMovie() ;
   }
 
