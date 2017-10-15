@@ -4,6 +4,7 @@ import { DataProvider } from '../../providers/data/data' ;
 import { MovieDetailPage } from '../movie-detail/movie-detail' ; 
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
+import { PromotionDetailPage } from '../promotion-detail/promotion-detail';
 /**
  * Generated class for the ShowingPage page.
  *
@@ -31,10 +32,16 @@ export class ShowingPage {
     console.log('ionViewDidLoad ShowingPage');
   }
 
-  itemTapped(event,movie) {
-    //this.navCtrl.push(QuotesDetailPage,{quote: quote}) ;
+  movieTapped(event,movie) {
     this.navCtrl.push(MovieDetailPage,movie) ;
   }
 
+  promoTapped(event,promo) {
+    this.navCtrl.push(PromotionDetailPage,{ 'promotionDetail': promo }) ;
+  }
+
+  slideChanged() {
+
+  }
   
 }

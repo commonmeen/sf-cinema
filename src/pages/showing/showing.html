@@ -15,27 +15,27 @@
 
 <ion-content padding>
 
-<ion-slides auto-play="3000" class="slide">
-  <ion-slide *ngIf="promotions[0].picc">
+<ion-slides autoplay="5000" loop="true" class="slide" (ionSlideDidChange)="slideChanged()">
+  <ion-slide *ngIf="promotions[0].picc" (click)="promoTapped($event,promotions[0])">
     <img src="pic/{{promotions[0].picc}}">
   </ion-slide>
-  <ion-slide *ngIf="promotions[1].picc">
+  <ion-slide *ngIf="promotions[1].picc" (click)="promoTapped($event,promotions[1])">
     <img src="pic/{{promotions[1].picc}}">
   </ion-slide>
-  <ion-slide *ngIf="promotions[2].picc">
+  <ion-slide *ngIf="promotions[2].picc" (click)="promoTapped($event,promotions[2])">
     <img src="pic/{{promotions[2].picc}}">
   </ion-slide>
-  <ion-slide *ngIf="promotions[3].picc">
+  <ion-slide *ngIf="promotions[3].picc" (click)="promoTapped($event,promotions[3])">
     <img src="pic/{{promotions[3].picc}}">
   </ion-slide>
-  <ion-slide *ngIf="promotions[4].picc">
+  <ion-slide *ngIf="promotions[4].picc" (click)="promoTapped($event,promotions[4])">
     <img src="pic/{{promotions[4].picc}}">
   </ion-slide>
 </ion-slides>
 
   <ion-grid class="grid">
     <ion-row >
-      <ion-col *ngFor="let m of movies" col-4 (click)="itemTapped($event,m)">
+      <ion-col *ngFor="let m of movies" col-4 (click)="movieTapped($event,m)">
         <img src="pic/{{m.pic}}" class="picMovie">
         <div class="date">{{m.date}}</div> 
         <div class="showing">{{m.nameTh}}</div>
