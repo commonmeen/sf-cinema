@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data' ;
+import { MovieDetailPage } from '../movie-detail/movie-detail' ; 
+import { ViewChild } from '@angular/core';
+import { Slides } from 'ionic-angular';
 /**
  * Generated class for the ShowingPage page.
  *
@@ -14,10 +17,13 @@ import { DataProvider } from '../../providers/data/data' ;
   templateUrl: 'showing.html',
 })
 export class ShowingPage {
+  @ViewChild(Slides) slides: Slides;
   movies: Array<any> = [];
+  promotions : Array<any> = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private data:DataProvider) {
     this.movies = data.getMovie() ;
+    this.promotions = data.getPromotion() ;
   }
 
 
@@ -25,4 +31,10 @@ export class ShowingPage {
     console.log('ionViewDidLoad ShowingPage');
   }
 
+  itemTapped(event,movie) {
+    //this.navCtrl.push(QuotesDetailPage,{quote: quote}) ;
+    this.navCtrl.push(MovieDetailPage,movie) ;
+  }
+
+  
 }
