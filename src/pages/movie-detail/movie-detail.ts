@@ -14,29 +14,29 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'movie-detail.html',
 })
 export class MovieDetailPage {
-	nameTh: string ;
-	nameEn:string ;
-	date: string ;
-	type: string ; 
-	rate: string ;
-    pic: string ;
-    minutes: string ;
-    directed: string ;
-    starring: string[] ;
-    plot: string ;
+  nameTh: string;
+  nameEn: string;
+  date: string;
+  type: string;
+  rate: string;
+  pic: string;
+  minutes: string;
+  directed: string;
+  starring: string[];
+  plot: string;
 
-    
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  	this.nameTh = navParams.get("nameTh");
-  	this.nameEn = navParams.get("nameEn");
-  	this.date = navParams.get("date") ;
-	this.type = navParams.get("type") ;
-	this.rate = navParams.get("rate") ;
-    this.pic = navParams.get("pic") ;
-    this.minutes = navParams.get("minutes") ;
-    this.directed = navParams.get("directed") ;
-    this.starring = navParams.get("starring") ;
-    this.plot = navParams.get("plot") ;
+    this.nameTh = navParams.get("nameTh");
+    this.nameEn = navParams.get("nameEn");
+    this.date = navParams.get("date");
+    this.type = navParams.get("type");
+    this.rate = navParams.get("rate");
+    this.pic = navParams.get("pic");
+    this.minutes = navParams.get("minutes");
+    this.directed = navParams.get("directed");
+    this.starring = navParams.get("starring");
+    this.plot = navParams.get("plot");
   }
 
   ionViewDidLoad() {
