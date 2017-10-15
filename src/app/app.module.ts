@@ -13,6 +13,7 @@ import { HttpModule } from '@angular/http';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DataProvider } from '../providers/data/data';
+import { MovieDetailPage } from '../pages/movie-detail/movie-detail' ;
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { DataProvider } from '../providers/data/data';
     ComingPage,
     PromotionPage,
     PromotionDetailPage,
-    TabsPage
+    TabsPage,
+    MovieDetailPage
+
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,10 @@ import { DataProvider } from '../providers/data/data';
     ComingPage,
     PromotionPage,
     PromotionDetailPage,
-    TabsPage
+    TabsPage,
+    TabsPage,
+    MovieDetailPage
+
   ],
   providers: [
     StatusBar,
