@@ -4,33 +4,34 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { ShowingPage } from '../pages/showing/showing';
-import { CinemaPage } from '../pages/cinema/cinema';
+import { TheaterPage } from '../pages/theater/theater';
 import { ComingPage } from '../pages/coming/coming';
 import { MorePage } from '../pages/more/more';
 import { TabsPage } from '../pages/tabs/tabs';
-
+import { HttpModule } from '@angular/http';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { CinemaDataProvider } from '../providers/cinema-data/cinema-data';
+import { TheaterDataProvider } from '../providers/theater-data/theater-data';
 
 @NgModule({
   declarations: [
     MyApp,
     ShowingPage,
-    CinemaPage,
+    TheaterPage,
     ComingPage,
     MorePage,
     TabsPage
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     ShowingPage,
-    CinemaPage,
+    TheaterPage,
     ComingPage,
     MorePage,
     TabsPage
@@ -39,7 +40,7 @@ import { CinemaDataProvider } from '../providers/cinema-data/cinema-data';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CinemaDataProvider
+    TheaterDataProvider
   ]
 })
 export class AppModule {}

@@ -1,5 +1,5 @@
 <!--
-  Generated template for the CinemaPage page.
+  Generated template for the TheaterPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -14,5 +14,9 @@
 
 
 <ion-content padding>
+  <ion-card *ngFor="let t of theaterDetail">
+    <div>{{t.tell}}</div>
+   
 
+  </ion-card>
 </ion-content>
