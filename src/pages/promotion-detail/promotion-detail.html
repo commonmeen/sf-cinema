@@ -12,7 +12,19 @@
 
 </ion-header>
 
+<ion-content padding >
 
-<ion-content padding>
-
+<ion-card >
+	<ion-card-content>
+	    <div class="promotionDetail">{{promotionDetail.name}}</div>
+	</ion-card-content>
+	<ion-card-content >
+    <img src="pic/{{promotionDetail.pic}}" class="picMovie" >
+    <br>
+    <ion-list-header class="detail" no-lines>Detail</ion-list-header>
+		<div class="promotionDetail">{{promotionDetail.condition}}</div>
+  </ion-card-content>
+  <ion-list-header class="detail" no-lines>Date</ion-list-header>
+  <div class="promotionDetail">{{promotionDetail.name}}</div>
+</ion-card>
 </ion-content>

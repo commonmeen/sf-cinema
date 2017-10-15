@@ -16,8 +16,8 @@
 <ion-content padding>
   <ion-grid class="grid">
     <ion-row col-12>
-      <ion-col *ngFor="let p of promotions" class="showing">
-        <img src="pic/{{p.pic}}" class="picMovie">
+      <ion-col *ngFor="let p of promotions" class="promotionList" col-6 (click)="showTheaterDetail(p)">
+        <img src="pic/{{p.pic}}" class="picMovie" >
         {{p.subname}} <br>
        
       </ion-col>

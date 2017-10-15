@@ -14,12 +14,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'promotion-detail.html',
 })
 export class PromotionDetailPage {
+  promotionDetail:Array<any>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.promotionDetail = this.navParams.get('promotionDetail')
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PromotionDetailPage');
   }
+
 
 }

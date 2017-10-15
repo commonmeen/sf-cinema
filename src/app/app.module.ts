@@ -6,7 +6,8 @@ import { MyApp } from './app.component';
 import { ShowingPage } from '../pages/showing/showing';
 import { TheaterPage } from '../pages/theater/theater';
 import { ComingPage } from '../pages/coming/coming';
-import { MorePage } from '../pages/more/more';
+import { PromotionPage } from '../pages/promotion/promotion';
+import { PromotionDetailPage } from '../pages/promotion-detail/promotion-detail';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HttpModule } from '@angular/http';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -20,7 +21,8 @@ import { DataProvider } from '../providers/data/data';
     ShowingPage,
     TheaterPage,
     ComingPage,
-    MorePage,
+    PromotionPage,
+    PromotionDetailPage,
     TabsPage
   ],
   imports: [
@@ -34,7 +36,8 @@ import { DataProvider } from '../providers/data/data';
     ShowingPage,
     TheaterPage,
     ComingPage,
-    MorePage,
+    PromotionPage,
+    PromotionDetailPage,
     TabsPage
   ],
   providers: [
