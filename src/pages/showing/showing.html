@@ -7,13 +7,13 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>SF Cinema City</ion-title>
+    <ion-title class="title"><img src="pic/sf.png" class="logo"></ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="body">
 
 <ion-slides autoplay="5000" loop="true" class="slide" (ionSlideDidChange)="slideChanged()">
   <ion-slide *ngIf="promotions[0].picc" (click)="promoTapped($event,promotions[0])">
