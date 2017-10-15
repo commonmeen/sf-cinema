@@ -15,16 +15,25 @@
 <ion-content padding >
 
 <ion-card >
-	<ion-card-content>
-	    <div class="promotionDetail">{{promotionDetail.name}}</div>
-	</ion-card-content>
+	<ion-card-header>
+	    <div class="promotionHeader">{{promotionDetail.name}}</div>
+	</ion-card-header>
 	<ion-card-content >
     <img src="pic/{{promotionDetail.pic}}" class="picMovie" >
     <br>
-    <ion-list-header class="detail" no-lines>Detail</ion-list-header>
-		<div class="promotionDetail">{{promotionDetail.condition}}</div>
-  </ion-card-content>
-  <ion-list-header class="detail" no-lines>Date</ion-list-header>
-  <div class="promotionDetail">{{promotionDetail.name}}</div>
+    <ion-list-header class="detail" no-lines>รายละเอียดโปรโมชั่น</ion-list-header>
+		<div class="promotionDetail">{{promotionDetail.detail}}</div>
+  <br>
+  <ion-list-header class="detail" no-lines>ระยะเวลาโปรโมชั่น</ion-list-header>
+  <div class="promotionDetail">{{promotionDetail.date}}</div>
+  <br>
+  <ion-list-header class="detail" no-lines>ข้อกำหนดหรือเงื่อนไข</ion-list-header>
+  <ion-list *ngFor="let con of promotionDetail.condition">
+  <div class="promotionDetail">- {{con}}</div>
+  </ion-list>
+  <br>
+  <ion-list-header class="detail" no-lines>สาขาที่ร่วมรายการ</ion-list-header>
+  <div class="promotionDetail">{{promotionDetail.branches}}</div>
+</ion-card-content>
 </ion-card>
 </ion-content>
