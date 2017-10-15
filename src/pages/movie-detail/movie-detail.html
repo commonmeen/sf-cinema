@@ -14,20 +14,42 @@
 
 
 <ion-content padding>
-	<ion-item href="#">
-		<div>
-		<img class="poster" src="pic/{{pic}}">
-		<h1>{{nameTh}}</h1>
-		<h4>{{nameEn}}</h4>
-		ประเภท : {{type}} <br>
-		วัรที่เข้าฉาย : {{date}} <br>
-		เรท : {{rate}} | {{minutes}} minutes.
-
-		</div>
-	</ion-item>
-	<div> ผู้กำกับ : {{directed}} </div>
-	<div> นักแสดง : {{starring}} </div>	
-	<div> เรื่องย่อ : <br>
-	 {{plot}} </div>
+	<img class="poster" src="pic/{{pic}}">
+	<ion-grid class="grid">
+		<ion-row>
+			<ion-col col-4 class="posterDetailHeader">ชื่อเรื่อง : </ion-col>
+			<ion-col col-8 class="posterDetail">{{nameTh}}</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-4 class="posterDetailHeader">ประเภท : </ion-col>
+			<ion-col col-8 class="posterDetail">{{type}}</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-4 class="posterDetailHeader">วันที่เข้าฉาย : </ion-col>
+			<ion-col col-8 class="posterDetail">{{date}}</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-4 class="posterDetailHeader">เรท : </ion-col>
+			<ion-col col-8 class="posterDetail">{{rate}}</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-4 class="posterDetailHeader">เวลา : </ion-col>
+			<ion-col col-8 class="posterDetail">{{minutes}}</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-4 class="posterDetailHeader">ผู้กำกับ : </ion-col>
+			<ion-col col-8 class="posterDetail">{{directed}}</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-4 class="posterDetailHeader">นักแสดง : </ion-col>
+			<ion-col col-8 class="posterDetail">{{starring}}</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-4 class="posterDetailHeader">เรื่องย่อ : </ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col class="posterDetail">{{plot}}</ion-col>
+		</ion-row>
+	</ion-grid>
 
 </ion-content>
