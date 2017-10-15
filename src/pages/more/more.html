@@ -7,12 +7,21 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>SF Cinema City</ion-title>
+    <ion-title>Promotion</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-grid class="grid">
+    <ion-row col-12>
+      <ion-col *ngFor="let p of promotions" class="showing">
+        <img src="pic/{{p.pic}}" class="picMovie">
+        {{p.subname}} <br>
+       
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+
