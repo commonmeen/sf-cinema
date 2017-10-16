@@ -14,6 +14,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DataProvider } from '../providers/data/data';
 import { MovieDetailPage } from '../pages/movie-detail/movie-detail' ;
+import { Camera } from '@ionic-native/camera';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { MovieDetailPage } from '../pages/movie-detail/movie-detail' ;
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DataProvider,
+    Camera
  
   ]
 })

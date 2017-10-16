@@ -1,6 +1,8 @@
 {
   "name": "sf-cinema",
-  "app_id": "d3462899",
+  "app_id": "376f5606",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }
