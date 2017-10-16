@@ -25513,7 +25513,7 @@ ion-navbar.toolbar {
 }
 
 page-coming .logo {
-  width: 50%;
+  width: 35%;
 }
 
 page-movie-detail .poster {
@@ -25550,7 +25550,7 @@ page-movie-detail .grid {
 }
 
 page-movie-detail .logo {
-  width: 50%;
+  width: 35%;
 }
 
 page-promotion .promotionList {
@@ -25568,7 +25568,7 @@ page-promotion .picMovie {
 }
 
 page-promotion .logo {
-  width: 50%;
+  width: 35%;
 }
 
 page-promotion-detail .promotionDetail {
@@ -25596,7 +25596,7 @@ page-promotion-detail .promotionHeader {
 }
 
 page-promotion-detail .logo {
-  width: 50%;
+  width: 35%;
 }
 
 page-showing .showing {
@@ -25625,7 +25625,7 @@ page-showing .slide {
 }
 
 page-showing .logo {
-  width: 50%;
+  width: 35%;
 }
 
 page-showing .title {
@@ -25653,5 +25653,5 @@ page-theater .theaterHeader {
 }
 
 page-theater .logo {
-  width: 50%;
+  width: 35%;
 }
