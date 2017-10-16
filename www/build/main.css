@@ -25625,7 +25625,8 @@ page-showing .slide {
 }
 
 page-showing .logo {
-  width: 35%;
+  width: 25%;
+  margin: auto;
 }
 
 page-showing .title {
