@@ -25514,6 +25514,7 @@ ion-navbar.toolbar {
 
 page-coming .logo {
   width: 35%;
+  text-align: center;
 }
 
 page-movie-detail .poster {
