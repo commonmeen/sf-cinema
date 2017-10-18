@@ -25602,6 +25602,11 @@ page-promotion-detail .logo {
   margin: auto;
 }
 
+page-show-time .pic {
+  width: 25%;
+  hight: 25%;
+}
+
 page-showing .showing {
   font-size: 8pt;
   color: #4F4F4F;
