@@ -35,8 +35,10 @@ var ComingPage = (function () {
         this.navParams = navParams;
         this.movieComingOctober = [];
         this.movieComingNovember = [];
+        this.movieComingDecember = [];
         this.movieComingOctober = data.getMovieComingOctober();
         this.movieComingNovember = data.getMovieComingNovember();
+        this.movieComingDecember = data.getMovieComingDecember();
     }
     ComingPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad ComingPage');
@@ -48,7 +50,11 @@ var ComingPage = (function () {
 }());
 ComingPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+<<<<<<< HEAD
         selector: 'page-coming',template:/*ion-inline-start:"D:\Project\sf-cinema\src\pages\coming\coming.html"*/'<!--\n\n  Generated template for the ComingPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <div>October</div>\n\n  <ion-grid class="grid">\n\n    <ion-row >\n\n      <ion-col *ngFor="let mc of movieComingOctober" col-4 (click)="movieTapped($event,mc)">\n\n        <img src="pic/{{mc.pic}}" class="picMovie">\n\n        <div class="date">{{mc.date}}</div> \n\n        <div class="showing">{{mc.nameTh}}</div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n\n\n  <div>November</div>\n\n  <ion-grid class="grid">\n\n    <ion-row >\n\n      <ion-col *ngFor="let mn of movieComingNovember" col-4 (click)="movieTapped($event,mn)">\n\n        <img src="pic/{{mn.pic}}" class="picMovie">\n\n        <div class="date">{{mn.date}}</div> \n\n        <div class="showing">{{mn.nameTh}}</div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Project\sf-cinema\src\pages\coming\coming.html"*/,
+=======
+        selector: 'page-coming',template:/*ion-inline-start:"D:\sf-cinema\src\pages\coming\coming.html"*/'<!--\n\n  Generated template for the ComingPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <div class="dateHead">October</div>\n\n  <ion-grid class="grid">\n\n    <ion-row >\n\n      <ion-col *ngFor="let mc of movieComingOctober" col-4 >\n\n        <img src="pic/{{mc.pic}}" class="picMovie">\n\n        <div class="date">{{mc.date}}</div> \n\n        <div class="showing">{{mc.nameTh}}</div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n\n\n  <div class="dateHead">November</div>\n\n  <ion-grid class="grid">\n\n    <ion-row >\n\n      <ion-col *ngFor="let mn of movieComingNovember" col-4 >\n\n        <img src="pic/{{mn.pic}}" class="picMovie">\n\n        <div class="date">{{mn.date}}</div> \n\n        <div class="showing">{{mn.nameTh}}</div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n\n\n  <div class="dateHead">December</div>\n\n  <ion-grid class="grid">\n\n    <ion-row >\n\n      <ion-col *ngFor="let md of movieComingDecember" col-4 >\n\n        <img src="pic/{{md.pic}}" class="picMovie">\n\n        <div class="date">{{md.date}}</div> \n\n        <div class="showing">{{md.nameTh}}</div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\sf-cinema\src\pages\coming\coming.html"*/,
+>>>>>>> dad44141747da7fa4e9029a4934c3593cd3d4c9c
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__providers_data_data__["a" /* DataProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_data_data__["a" /* DataProvider */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _c || Object])
 ], ComingPage);
@@ -331,7 +337,11 @@ __decorate([
 ], ShowingPage.prototype, "slides", void 0);
 ShowingPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+<<<<<<< HEAD
         selector: 'page-showing',template:/*ion-inline-start:"D:\Project\sf-cinema\src\pages\showing\showing.html"*/'<!--\n\n  Generated template for the ShowingPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title class="title" align-title="center"><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="body">\n\n\n\n<ion-slides autoplay="5000" loop="true" class="slide" (ionSlideDidChange)="slideChanged()">\n\n  <ion-slide *ngIf="promotions[0].picc" (click)="promoTapped($event,promotions[0])">\n\n    <img src="pic/{{promotions[0].picc}}">\n\n  </ion-slide>\n\n  <ion-slide *ngIf="promotions[1].picc" (click)="promoTapped($event,promotions[1])">\n\n    <img src="pic/{{promotions[1].picc}}">\n\n  </ion-slide>\n\n  <ion-slide *ngIf="promotions[2].picc" (click)="promoTapped($event,promotions[2])">\n\n    <img src="pic/{{promotions[2].picc}}">\n\n  </ion-slide>\n\n  <ion-slide *ngIf="promotions[3].picc" (click)="promoTapped($event,promotions[3])">\n\n    <img src="pic/{{promotions[3].picc}}">\n\n  </ion-slide>\n\n  <ion-slide *ngIf="promotions[4].picc" (click)="promoTapped($event,promotions[4])">\n\n    <img src="pic/{{promotions[4].picc}}">\n\n  </ion-slide>\n\n</ion-slides>\n\n\n\n  <ion-grid class="grid">\n\n    <ion-row >\n\n      <ion-col *ngFor="let m of movies" col-4 (click)="movieTapped($event,m)">\n\n        <img src="pic/{{m.pic}}" class="picMovie">\n\n        <div class="date">{{m.date}}</div> \n\n        <div class="showing">{{m.nameTh}}</div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Project\sf-cinema\src\pages\showing\showing.html"*/,
+=======
+        selector: 'page-showing',template:/*ion-inline-start:"D:\sf-cinema\src\pages\showing\showing.html"*/'<!--\n\n  Generated template for the ShowingPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="body">\n\n\n\n<ion-slides autoplay="5000" loop="true" class="slide" (ionSlideDidChange)="slideChanged()">\n\n  <ion-slide *ngIf="promotions[0].picc" (click)="promoTapped($event,promotions[0])">\n\n    <img src="pic/{{promotions[0].picc}}">\n\n  </ion-slide>\n\n  <ion-slide *ngIf="promotions[1].picc" (click)="promoTapped($event,promotions[1])">\n\n    <img src="pic/{{promotions[1].picc}}">\n\n  </ion-slide>\n\n  <ion-slide *ngIf="promotions[2].picc" (click)="promoTapped($event,promotions[2])">\n\n    <img src="pic/{{promotions[2].picc}}">\n\n  </ion-slide>\n\n  <ion-slide *ngIf="promotions[3].picc" (click)="promoTapped($event,promotions[3])">\n\n    <img src="pic/{{promotions[3].picc}}">\n\n  </ion-slide>\n\n  <ion-slide *ngIf="promotions[4].picc" (click)="promoTapped($event,promotions[4])">\n\n    <img src="pic/{{promotions[4].picc}}">\n\n  </ion-slide>\n\n</ion-slides>\n\n\n\n  <ion-grid class="grid">\n\n    <ion-row >\n\n      <ion-col *ngFor="let m of movies" col-4 (click)="movieTapped($event,m)">\n\n        <img src="pic/{{m.pic}}" class="picMovie">\n\n        <div class="date">{{m.date}}</div> \n\n        <div class="showing">{{m.nameTh}}</div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\sf-cinema\src\pages\showing\showing.html"*/,
+>>>>>>> dad44141747da7fa4e9029a4934c3593cd3d4c9c
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_data_data__["a" /* DataProvider */]])
 ], ShowingPage);
@@ -579,7 +589,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_10__pages_tabs_tabs__["a" /* TabsPage */],
             __WEBPACK_IMPORTED_MODULE_15__pages_movie_detail_movie_detail__["a" /* MovieDetailPage */],
             __WEBPACK_IMPORTED_MODULE_16__pages_ticket_ticket__["a" /* TicketPage */],
-            __WEBPACK_IMPORTED_MODULE_4__pages_show_time_show_time__["a" /* ShowTimePage */]
+            __WEBPACK_IMPORTED_MODULE_4__pages_show_time_show_time__["a" /* ShowTimePage */],
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
@@ -609,7 +619,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_10__pages_tabs_tabs__["a" /* TabsPage */],
             __WEBPACK_IMPORTED_MODULE_15__pages_movie_detail_movie_detail__["a" /* MovieDetailPage */],
             __WEBPACK_IMPORTED_MODULE_16__pages_ticket_ticket__["a" /* TicketPage */],
-            __WEBPACK_IMPORTED_MODULE_4__pages_show_time_show_time__["a" /* ShowTimePage */]
+            __WEBPACK_IMPORTED_MODULE_4__pages_show_time_show_time__["a" /* ShowTimePage */],
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_12__ionic_native_status_bar__["a" /* StatusBar */],
@@ -703,6 +713,7 @@ var DataProvider = (function () {
         this.movies = [];
         this.moviesComingOctober = [];
         this.moviesComingNovember = [];
+        this.moviesComingDecember = [];
         this.theatres = [];
         this.promotions = [];
         console.log('Hello DataProvider Provider');
@@ -964,8 +975,67 @@ var DataProvider = (function () {
                     minutes: "", directed: "Christopher Landon", starring: ["Israel Broussard", "Jessica Rothe", "ruby Modine"],
                     plot: "เรื่องราวของนักศึกษามหาวิทยาลัย ที่เล่าย้อนถึงวันที่เธอถูกฆาตกรรมอย่างผิดปกติและน่าสะพรึงกลัว จนกระทั่งเธอค้นพบใครกันแน่ที่ลงมือฆาตกรรม"
                 },
+                {
+                    nameTh: "Jigsaw", nameEn: "Jigsaw", date: "30 November 2017", type: "Horror", rate: "18+",
+                    pic: "jigsaw.jpg",
+                    minutes: "91", directed: "Peter Spierig", starring: ["Tobin Bell", "Matt Passmore", "Laura Vandervoort"],
+                    plot: "การกลับมาอีกครั้งของ Jigsaw ฆาตกรโรคจิตอัจฉริยะที่โหดสุดในประวัติศาสตร์ ปรากฏการณ์เลือดท่วมจอครั้งนี้เกิดขึ้นเมื่อตารวจพบศพที่ล้วนแล้วจบชีวิตด้วยวิธีสุดวิปลาศ ซึ่งทุกหลักฐานและการสืบสวนชี้ไปที่ จอห์น เครเมอร์ Jigsaw ต้นตารับที่ตายไปแล้วหลายปี ปริศนาแห่งการตามล่าจึงอุบัติขึ้นก่อนที่จะมีใครจะตกเป็นเหยื่อการทรมานสุดวิปริตของมัน"
+                },
+                {
+                    nameTh: "เรเนเกดส์ ทีมยุทธการล่าโคตรทองใต้สมุทร", nameEn: "Renegades", date: "30 November 2017", type: "Action", rate: "15+",
+                    pic: "renegades.jpg",
+                    minutes: "105", directed: "Steven Quale", starring: ["Dimitri Leonidas", "Ewan Bremner", "Sullivan Stapieton"],
+                    plot: "เรื่องราวของหน่วยนาวีซีล ที่ต้องต่อสู้เพื่อปกป้องสมบัติมหาศาลในห้วงน้ำลึก เมื่อค้นพบสมบัติใต้น้ำในทะเลสาบบอสเนีย"
+                },
+                {
+                    nameTh: "Wind River", nameEn: "Wind River", date: "30 November 2017", type: "Action", rate: "15+",
+                    pic: "wind.jpg",
+                    minutes: "107", directed: "Taylor Sheridan", starring: ["Kelsey Asbille", "Elizabeth Olsen", "Jermy Renner"],
+                    plot: "(อลิซาเบธ โอลเซ่น) รับบท เป็นเอฟบีไอสาวที่ต้องไปทำคดีตามลำพังในเขตสงวนของชาวพื้นเมืองอเมริกัน หลังจากมีการพบศพหญิงสาวนอนหน้ำคว่ำอยู่กลางหิมะ (เจเรมี เรนเนอร์) รับบทเป็นเจ้าหน้าที่ควบคุมดูแลการล่าสัตว์ของพื้นที่ที่ไปพบศพและถูกเธอขอให้มาช่วยสืบคดี"
+                },
             ];
         return this.moviesComingNovember;
+    };
+    DataProvider.prototype.getMovieComingDecember = function () {
+        this.moviesComingDecember =
+            [{
+                    nameTh: "แฮร์รี่ โฮล กับคดีฆาตกรมนุษย์หิมะ", nameEn: "The Snowman", date: "07 December 2017", type: "Crime", rate: "18+",
+                    pic: "snowman.jpg",
+                    minutes: "125", directed: "Tomas Alfredson", starring: ["Michael Fassbender", "Rebecca Ferguson", "val Kilmer"],
+                    plot: "เมื่อหัวหน้าทีมนักสืบ (ฟาสส์เบนเดอร์) นำทีมสืบสวนคดีอาชญากรรมการหายตัวไปของเหยื่อในวันหิมะตกครั้งแรกในฤดูหนาว เขากลัวว่าฆาตกรต่อเนื่องซึ่งยังหลบหนีอยู่อาจกลับมาอีกครั้ง หากเขาหวังที่จะชิงไหวชิงพริบกับปีศาจร้ายก่อนที่หิมะจะตกอีกครั้ง ตำรวจต้องเชื่อมต่อคดีเก่าหลายสิบปีเข้ากับคดีใหม่สุดโหด ด้วยความช่วยเหลือของสมาชิกใหม่ (เฟอร์กูสัน)"
+                },
+                {
+                    nameTh: "Better Watch Out", nameEn: "Better Watch Out", date: "07 December 2017", type: "Horror", rate: "18+",
+                    pic: "watch.jpg",
+                    minutes: "85", directed: "Chris Peckover", starring: ["Virginia Madasen", "Dacre Montgomery", "Patrick Warburton"],
+                    plot: "เมื่อพ่อกับแม่ของ ลุค เด็กชายวัย 12 ปี (แสดงโดย เลวี มิลเลอร์) พากันออกไปต่างเมืองเพื่อไปฉลองวันคริสต์มากัน โดยทิ้งเขาเอาไว้กับพี่เลี้ยงสาวสวย แอชลี่ย์ (แสดงโดย โอลิเวีย ดีจอนจ์) และ การ์เรต (แสดงโดย เอ็ด ออกเซนบาวน์) เพื่อนที่เป็นเด็กเนิร์ด ตามลำพัง แต่ค่ำคืนอันเงียบสงบของพวกเขาถูกรุกรานจากโจรร้ายหมายจะปล้นชิงทรัพย์ ทำให้ตัวตนอีกด้านหนึ่งของลุคได้เปิดเผยออกมา ลุคได้เริ่มแผนการวางกับดักสารพัดสังหาร เพื่อลงโทษเหล่าโจร และคนรอบข้างที่มารบกวนค่ำคืนอันแสนสุขของเขา"
+                },
+                {
+                    nameTh: "สตาร์ วอร์ส: ปัจฉิมบทแห่งเจได", nameEn: "Star Wars: The Last Jedi", date: "14 December 2017", type: "Action", rate: "ทั่วไป",
+                    pic: "star.jpg",
+                    minutes: "", directed: "Rian Johnson", starring: ["John boyega", "Mark Hamil", "Daisy Ridley"],
+                    plot: "Star Wars: The Last Jedi จะสานต่อเรื่องราวจาก The Force Awakens โดยมีกระแสว่า เรย์ จะฝึกซ้อมการเป็นเจไดกับ ลุค สกายวอล์คเกอร์ ขณะที่ ไคโล เรน จะลักพาตัว ฟินน์ ที่กำลังทำภารกิจร่วมกับเพื่อนใหม่ ส่วนทางด้าน โพ ดาเมรอน ก็กำลังร่วมมือกับนายพลหญิง เลอา ในการล่อให้ เรย์ ออกมาจากที่ซ่อน ยิ่งไปกว่านั้นเราจะได้เห็นการประลองดาบไลท์เซเบอร์ระหว่าง เรย์ กับ ไคโล เรน"
+                },
+                {
+                    nameTh: "Wonder", nameEn: "Wonder", date: "14 December 2017", type: "Drama", rate: "ทั่วไป",
+                    pic: "wonder.jpg",
+                    minutes: "113", directed: "Stephen Chbosky", starring: ["Jolia Roberts", "Jacob Tremblay", "Owen Wilson"],
+                    plot: "เรื่องราวของ ออกัสต์ พูลล์แมน เด็กชายอายุ 10 ขวบที่บ้าสตาร์วอร์ส ชอบกินไอติม ติดเกม และ มีครอบครัวที่อบอุ่น แม่ที่รักเขาที่สุดในโลก แต่ ออกัสต์ ป่วยด้วยโรค Mandibulofacial Dysostosis ( โรคปากแหว่งเพดานโหว่ ) ตั้งแต่แรกเกิด จน อายุ 10 ขวบ ออกัสต์ เข้ารับการผ่าตัดใบหน้ามาแล้วกว่า 27 ครั้ง คนแปลกหน้ามักเบือนหน้าหนีเมื่อเห็นหน้าเขา หลายคนมองว่า ออกัสต์ มีหน้าตาที่น่าเกลียด จนไม่อยากเข้าใกล้ แต่ คนใกล้ตัว และออกัส กลับไม่คิดแบบนั้น เขาเป็นแค่ เด็กชายตัวน้อยที่อยากกินไอติมโดยที่เด็กคนอื่นๆเห็นว่าเขากิน”จริงๆ” เขาอยากแต่งชุดซุปเปอร์ฮีโร่โดยไม่ต้องคอยสวมหน้ากากปิดใบหน้า เขาอยากไปโรงเรียนและเล่นกับเด็กทั่วไปอย่างปกติสุข หนังจะบอกเล่าผ่านมุมมองและความนึกคิดของตัวละครแต่ละตัว เริ่มต้นจากตัวของเด็กชาย แล้วตามด้วยพ่อแม่ พี่สาว เพื่อนคนแรก เพื่อนที่คอยแกล้ง เพื่อนที่คอยช่วยเหลือ ผ่านมุมมองของเด็กชายตัวเล็ก ที่มีหัวใจดวงโต และ น่ารักที่สุดในโลก เด็กชายที่มีชื่อว่า  ออกัสต์ พูลล์แมน"
+                },
+                {
+                    nameTh: "Suburbicon", nameEn: "Suburbicon", date: "14 December 2017", type: "Crime", rate: "ทั่วไป",
+                    pic: "suburbicon.jpg",
+                    minutes: "104", directed: "George Clooney", starring: ["Matt Damon", "Oscar Isaac", "Julianne Moore"],
+                    plot: "Suburbicon เป็นชื่อของหมู่บ้านชานเมืองในปี 1959 ที่สงบ เรียบร้อย น่าอยู่ เหมาะสำหรับการตั้งครอบครัว แต่เบื้องหน้าที่ดูเหมือนร่มรื่นนั้นแฝงไปด้วยเรื่องราวการหลอกลวง หักหลัง มาเฟีย และฆาตกรรมในหนังตลกร้ายแนวอาชญากรรมที่มีตัวละครหญิงร้ายชายเลวรับบทโดยแมต เดมอน, จูลี่แอน มัวร์ และ ออสการ์ ไอแซ็ค"
+                },
+                {
+                    nameTh: "Ferdinand", nameEn: "Ferdinand", date: "21 December 2017", type: "Animation", rate: "ทั่วไป",
+                    pic: "ferdinand.jpg",
+                    minutes: "", directed: "Carlos Saldanha", starring: ["John Cena", "Daveed Diggs", "Kate McKinnon"],
+                    plot: "Ferdinand ถ่ายทอดเรื่องราวของกระทิงยักษ์ที่มีใจกล้าหาญ หลังจากถูกเข้าใจผิดวาเป็นสัตว์อันตราย เขาถูกจับตัวไปและต้องพลัดพรากกับครอบครัว เขาพยายามหาทางกลับไปหาครอบครัว เขารวมตัวทีมสัตว์แปลกๆ เพื่อออกผจญภัย เรื่องราวในภาพยนตร์เกิดขึ้นที่สเปน ภาพยนตร์เรื่อง Ferdinand เป็นบทพิสูจน์ว่าคุณไม่อาจตัดสินกระทิงภายนอกของมันได้"
+                },
+            ];
+        return this.moviesComingDecember;
     };
     return DataProvider;
 }());
@@ -1081,7 +1151,11 @@ var TicketPage = (function () {
 }());
 TicketPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+<<<<<<< HEAD
         selector: 'page-ticket',template:/*ion-inline-start:"D:\Project\sf-cinema\src\pages\ticket\ticket.html"*/'<!--\n\n  Generated template for the TicketPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>ticket</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding >\n\n  <div class="header"> {{theater.name}} <br> {{theater.date}} October 2017 - {{theater.t}}</div>\n\n  <ion-grid class="grid">\n\n    <ion-row>\n\n      <ion-col>\n\n        <div class="screen">S C R E E N</div>\n\n      </ion-col>\n\n    </ion-row><br>\n\n    <ion-row >\n\n      <ion-col col-12>\n\n        <img src="pic/{{t1.pic}}.jpg" *ngFor="let t1 of totalSeat1" class="seat" (click)="byTickets(t1)">\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row>\n\n    </ion-row><br>\n\n    <ion-row >\n\n      <ion-col col-12>\n\n        <img src="pic/{{t2.pic}}.jpg" *ngFor="let t2 of totalSeat2" class="seat" (click)="byTickets(t2)">\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row >\n\n        <ion-col style="text-align: center">\n\n          <img src="pic/{{vip.pic}}.jpg" *ngFor="let vip of totalSeatVip" class="vip" (click)="byTickets(vip)">\n\n        </ion-col> \n\n    </ion-row>\n\n\n\n    <ion-card>\n\n        Selected Seats {{nowSeat}}  ราคา : {{price}} บาท  \n\n    </ion-card>\n\n    \n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Project\sf-cinema\src\pages\ticket\ticket.html"*/,
+=======
+        selector: 'page-ticket',template:/*ion-inline-start:"D:\sf-cinema\src\pages\ticket\ticket.html"*/'<!--\n\n  Generated template for the TicketPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding >\n\n  <div class="header"> {{theater.name}} <br> {{theater.date}} October 2017 - {{theater.t}}</div>\n\n  <ion-grid class="grid">\n\n    <ion-row>\n\n      <ion-col>\n\n        <div class="screen">S C R E E N</div>\n\n      </ion-col>\n\n    </ion-row><br>\n\n    <ion-row >\n\n      <ion-col col-12>\n\n        <img src="pic/{{t1.pic}}.jpg" *ngFor="let t1 of totalSeat1" class="seat" (click)="byTickets(t1)">\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row>\n\n    </ion-row><br>\n\n    <ion-row >\n\n      <ion-col col-12>\n\n        <img src="pic/{{t2.pic}}.jpg" *ngFor="let t2 of totalSeat2" class="seat" (click)="byTickets(t2)">\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row >\n\n        <ion-col style="text-align: center">\n\n          <img src="pic/{{vip.pic}}.jpg" *ngFor="let vip of totalSeatVip" class="vip" (click)="byTickets(vip)">\n\n        </ion-col> \n\n    </ion-row>\n\n\n\n    \n\n    \n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\sf-cinema\src\pages\ticket\ticket.html"*/,
+>>>>>>> dad44141747da7fa4e9029a4934c3593cd3d4c9c
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]) === "function" && _d || Object])
 ], TicketPage);

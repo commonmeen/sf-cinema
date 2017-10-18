@@ -19,6 +19,7 @@ import { TicketPage } from '../pages/ticket/ticket';
 
 
 
+
 @NgModule({
   declarations: [
     MyApp,
@@ -30,7 +31,8 @@ import { TicketPage } from '../pages/ticket/ticket';
     TabsPage,
     MovieDetailPage,
     TicketPage,
-    ShowTimePage
+    ShowTimePage,
+  
 
 
   ],
@@ -51,7 +53,8 @@ import { TicketPage } from '../pages/ticket/ticket';
     TabsPage,
     MovieDetailPage,
     TicketPage,
-    ShowTimePage 
+    ShowTimePage,
+
 
 
   ],
