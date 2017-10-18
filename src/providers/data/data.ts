@@ -11,7 +11,8 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DataProvider {
   movies : Array<any> = [];
-  moviesComing : Array<any> = [];
+  moviesComingOctober : Array<any> = [];
+  moviesComingNovember : Array<any> = [];
 	theatres : Array<any> = [];
 	promotions : Array<any> = [] ;
   constructor(public http: Http) {
@@ -222,8 +223,8 @@ export class DataProvider {
 
 
 
-  getMovieComing() : Array<any> {
-  	this.moviesComing =
+  getMovieComingOctober() : Array<any> {
+  	this.moviesComingOctober =
   	[	{
         nameTh: "ขอตายวูบเดียว", nameEn: "Flatliners", date: "19 October 2017", type: "Drama", rate: "15+",
         pic: "flatliners.jpg",
@@ -268,6 +269,57 @@ export class DataProvider {
 
     ]
 
-      return this.moviesComing ;
+      return this.moviesComingOctober ;
+  }
+
+
+
+  getMovieComingNovember() : Array<any> {
+  	this.moviesComingNovember =
+  	[	{
+        nameTh: "หัวใจไม่แพ้", nameEn: "Stronger", date: "02 November 2017", type: "Drama", rate: "15+",
+        pic: "stronger.jpg",
+        minutes: "120", directed: "David Gordon Green", starring: ["Clancy Brown","Jake Gyllenhaal","Tatiana Maslany"],
+        plot: "เรื่องจริงของชายที่ไม่ย่อท้อต่อโชคชะตา เจฟฟ์ เบาว์แมน ชายธรรมดาทั่วไปวัย 27 ปี ที่กำลังวาดอนาคตกับ อีริน แฟนสาวไว้อย่างสวยงาม แต่ทุกอย่างกลับพังทะลายเมื่อ เจฟฟ์ กลายเป็นหนึ่งในเหยื่อที่โดนลูกหลงจากการวางระเบิดที่งานบอสตันมาราธอน เจฟฟ์ ตื่นมาในวันอังคารที่ 16 เมษายน 2013 ที่โรงพยาบาลหลังจากทีมแพทย์ผ่าตัดเพื่อรักษาชีวิตเขาแต่ก็ต้องแลกมาด้วยขาทั้งสองข้าง เมื่อ เจฟฟ์ รู้สึกตัวเขากลายมาเป็นฟันเฟืองสำคัญในการตามล่า 2 ผู้ก่อการร้ายมารับผิด โดยไม่ทันได้รู้เลยว่าภาพถ่ายของเขาที่ขาห้อยต่องแต่งจะกลายมาเป็นภาพที่เป็นตัวแทนของความโหดร้ายในเหตุการณ์ครั้งนี้ แม้ว่า เจฟฟ์ ต้องสูญเสียขาทั้งสองข้างไป แต่คำว่ายอมแพ้ไม่เคยเป็นตัวเลือกของเขา เจฟฟ์ ยิ้มรับกับเรื่องที่เกิด มองโลกในแง่ดี และทำทุกอย่างเพื่อให้กลับมาเดินได้อีกครั้ง เรื่องราวของเขาจะมอบแรงใจให้กับคนที่กำลังท้อถอย"
+      },
+
+      {
+        nameTh: "The Killing of a Sacred Deer", nameEn: "The Killing of a Sacred Deer", date: "02 November 2017", type: "Drama", rate: "ทั่วไป",
+        pic: "killing.jpg",
+        minutes: "120", directed: "Yorgos Lanthimos", starring: ["Colin Ferrell", "Nicole Kidman", "Alicia Silverstone"],
+        plot: "ติดตามเรื่องย่อได้เร็วๆ นี้"
+      },
+
+      {
+        nameTh: "คอลอสซาน ทั้งจักรวาลเป็นของเธอ", nameEn: "Colossal", date: "09 November 2017", type: "Action", rate: "ทั่วไป",
+        pic: "colossal.jpg",
+        minutes: "", directed: "Nacho Vigalondo", starring: ["Jason Sudeikis", "Anne Hathaway", "Austin Stowell"],
+        plot: "กลอเรีย (Anne Hathaway) เป็นสาวปาร์ตี้ที่ไม่ได้ทำงาน หลังจากถูกแฟนหนุ่มไล่ออกจากอพาร์ตเมนต์ บังคับให้เธอต้องย้ายจากนิวยอร์ก กลับไปบ้านเกิดของเธอ เมื่อข่าวรายงานว่าสิ่งมีชีวิตขนาดยักษ์กำลังทำลายกรุงโซล เกาหลีใต้ กลอเรียก็ค่อยๆ ตระหนักว่าเธอเกี่ยวข้องกับปรากฏการณ์อันไกลโพ้นนี้ เมื่อเหตุการณ์เริ่มควบคุมไม่ได้ กลอเรียต้องตัดสินใจว่า ทำไมการมีชีวิตที่ไม่มีนัยสาคัญของเธอ ดูเหมือนจะมีผลมหาศาลต่อชะตากรรมของโลก"
+      },
+      {
+        nameTh: "Only the Brave", nameEn: "Only the Brave", date: "09 November 2017", type: "Biography", rate: "ทั่วไป",
+        pic: "only.jpg",
+        minutes: "", directed: "Joseph Kosinski", starring: ["Jennifer Connelly", "Miles Teller", "Taylor Kitsch"],
+        plot: "โจเซฟ โคซินสกี้ จัดเป็นสุดยอดผู้กำกับสายไซไฟ ที่เคยฝากผลงานวิสัยทัศน์ล้าไว้ใน Tron Legacy และ Oblivion ขอผนึกกาลังกับโปรดิวเซอร์มากฝีมือ ลอเรนโซ ดิ โบนาเวนทูรา ที่อยู่เบื้องหลังความสำเร็จของหนังอย่าง Transformers และ Deepwater Horizon หยิบเอาเรื่องจริงของหน่วย แกรนิต เมาท์เท่น ฮอตช็อตส์ กลุ่มนักผจญเพลิงที่ต้องรับมือกับไฟป่าครั้งร้ายแรงที่สุดที่พร้อมจะเปลี่ยนผืนป่าขนาดใหญ่ให้เป็นนรกบนดิน เพื่อปกป้องตัวเมืองอริโซน่าเอาไว้พวกเขาทำงานโดยไม่คำนึงถึงชีวิตตัวเองเพื่อช่วยเหลือคนที่พวกเขารัก เรื่องราวของมิตรภาพ ความเสียสละ และความกล้าหาญ และวีรกรรมที่โลกไม่รู้ลืม" 
+      },
+
+      {
+        nameTh: "The Big Sick", nameEn: "The Big Sick", date: "09 November 2017", type: "v", rate: "ทั่วไป",
+        pic: "big.jpg",
+        minutes: "120", directed: "Michael Showalter", starring: ["Holly Hunter", "Zoe Kazan", "Kumail Nanjiani"],
+        plot: "ติดตามเรื่องย่อได้เร็วๆ นี้" 
+      },
+
+      {
+        nameTh: "สุขสันต์วันตาย", nameEn: "Happy Death Day", date: "23 November 2017", type: "Horror", rate: "18+",
+        pic: "happy.jpg",
+        minutes: "", directed: "Christopher Landon", starring: ["Israel Broussard", "Jessica Rothe", "ruby Modine"],
+        plot: "เรื่องราวของนักศึกษามหาวิทยาลัย ที่เล่าย้อนถึงวันที่เธอถูกฆาตกรรมอย่างผิดปกติและน่าสะพรึงกลัว จนกระทั่งเธอค้นพบใครกันแน่ที่ลงมือฆาตกรรม"
+      },
+
+
+    ]
+
+      return this.moviesComingNovember ;
   }
 }

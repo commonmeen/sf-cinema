@@ -14,12 +14,24 @@
 
 
 <ion-content padding>
+  <div>October</div>
   <ion-grid class="grid">
     <ion-row >
-      <ion-col *ngFor="let mc of movieComing" col-4 >
+      <ion-col *ngFor="let mc of movieComingOctober" col-4 >
         <img src="pic/{{mc.pic}}" class="picMovie">
         <div class="date">{{mc.date}}</div> 
         <div class="showing">{{mc.nameTh}}</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div>November</div>
+  <ion-grid class="grid">
+    <ion-row >
+      <ion-col *ngFor="let mn of movieComingNovember" col-4 >
+        <img src="pic/{{mn.pic}}" class="picMovie">
+        <div class="date">{{mn.date}}</div> 
+        <div class="showing">{{mn.nameTh}}</div>
       </ion-col>
     </ion-row>
   </ion-grid>

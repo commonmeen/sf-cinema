@@ -31,8 +31,10 @@ var ComingPage = (function () {
         this.data = data;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.movieComing = [];
-        this.movieComing = data.getMovieComing();
+        this.movieComingOctober = [];
+        this.movieComingNovember = [];
+        this.movieComingOctober = data.getMovieComingOctober();
+        this.movieComingNovember = data.getMovieComingNovember();
     }
     ComingPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad ComingPage');
@@ -41,11 +43,12 @@ var ComingPage = (function () {
 }());
 ComingPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-coming',template:/*ion-inline-start:"D:\Project\sf-cinema\src\pages\coming\coming.html"*/'<!--\n\n  Generated template for the ComingPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-grid class="grid">\n\n    <ion-row >\n\n      <ion-col *ngFor="let mc of movieComing" col-4 >\n\n        <img src="pic/{{mc.pic}}" class="picMovie">\n\n        <div class="date">{{mc.date}}</div> \n\n        <div class="showing">{{mc.nameTh}}</div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Project\sf-cinema\src\pages\coming\coming.html"*/,
+        selector: 'page-coming',template:/*ion-inline-start:"D:\sf-cinema\src\pages\coming\coming.html"*/'<!--\n\n  Generated template for the ComingPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <div>October</div>\n\n  <ion-grid class="grid">\n\n    <ion-row >\n\n      <ion-col *ngFor="let mc of movieComingOctober" col-4 >\n\n        <img src="pic/{{mc.pic}}" class="picMovie">\n\n        <div class="date">{{mc.date}}</div> \n\n        <div class="showing">{{mc.nameTh}}</div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n\n\n  <div>November</div>\n\n  <ion-grid class="grid">\n\n    <ion-row >\n\n      <ion-col *ngFor="let mn of movieComingNovember" col-4 >\n\n        <img src="pic/{{mn.pic}}" class="picMovie">\n\n        <div class="date">{{mn.date}}</div> \n\n        <div class="showing">{{mn.nameTh}}</div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\sf-cinema\src\pages\coming\coming.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_data_data__["a" /* DataProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__providers_data_data__["a" /* DataProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_data_data__["a" /* DataProvider */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _c || Object])
 ], ComingPage);
 
+var _a, _b, _c;
 //# sourceMappingURL=coming.js.map
 
 /***/ }),
@@ -101,7 +104,7 @@ var MovieDetailPage = (function () {
 }());
 MovieDetailPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-movie-detail',template:/*ion-inline-start:"D:\Project\sf-cinema\src\pages\movie-detail\movie-detail.html"*/'<!--\n\n  Generated template for the MovieDetailPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <div >\n\n			<ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n		</div>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n	<img class="poster" src="pic/{{pic}}"><br>\n\n	<!-- <div style="text-align: center" (click)="byTicket($event,nameTh)">\n\n		<button ion-button >By Ticket</button>\n\n	</div> -->\n\n	<ion-grid class="gird">\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">ชื่อเรื่อง: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{nameTh}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">ประเภท: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{type}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">วันที่เข้าฉาย: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{date}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">เรท: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{rate}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">เวลา: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{minutes}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">ผู้กำกับ: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{directed}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">นักแสดง: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{starring}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">เรื่องย่อ: </ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col class="posterDetail">{{plot}}</ion-col>\n\n		</ion-row>\n\n	</ion-grid>\n\n	\n\n	\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Project\sf-cinema\src\pages\movie-detail\movie-detail.html"*/,
+        selector: 'page-movie-detail',template:/*ion-inline-start:"D:\sf-cinema\src\pages\movie-detail\movie-detail.html"*/'<!--\n\n  Generated template for the MovieDetailPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <div >\n\n			<ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n		</div>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n	<img class="poster" src="pic/{{pic}}"><br>\n\n	<!-- <div style="text-align: center" (click)="byTicket($event,nameTh)">\n\n		<button ion-button >By Ticket</button>\n\n	</div> -->\n\n	<ion-grid class="gird">\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">ชื่อเรื่อง: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{nameTh}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">ประเภท: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{type}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">วันที่เข้าฉาย: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{date}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">เรท: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{rate}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">เวลา: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{minutes}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">ผู้กำกับ: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{directed}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">นักแสดง: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{starring}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">เรื่องย่อ: </ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col class="posterDetail">{{plot}}</ion-col>\n\n		</ion-row>\n\n	</ion-grid>\n\n	\n\n	\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"D:\sf-cinema\src\pages\movie-detail\movie-detail.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
 ], MovieDetailPage);
@@ -156,7 +159,7 @@ var PromotionPage = (function () {
 }());
 PromotionPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-promotion',template:/*ion-inline-start:"D:\Project\sf-cinema\src\pages\promotion\promotion.html"*/'<!--\n\n  Generated template for the MorePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-grid class="grid">\n\n    <ion-row col-12>\n\n      <ion-col *ngFor="let p of promotions" class="promotionList" col-6 (click)="showTheaterDetail(p)">\n\n        <img src="pic/{{p.pic}}" class="picMovie" >\n\n        {{p.subname}} <br>\n\n       \n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"D:\Project\sf-cinema\src\pages\promotion\promotion.html"*/,
+        selector: 'page-promotion',template:/*ion-inline-start:"D:\sf-cinema\src\pages\promotion\promotion.html"*/'<!--\n\n  Generated template for the MorePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-grid class="grid">\n\n    <ion-row col-12>\n\n      <ion-col *ngFor="let p of promotions" class="promotionList" col-6 (click)="showTheaterDetail(p)">\n\n        <img src="pic/{{p.pic}}" class="picMovie" >\n\n        {{p.subname}} <br>\n\n       \n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"D:\sf-cinema\src\pages\promotion\promotion.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_data_data__["a" /* DataProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
 ], PromotionPage);
@@ -230,7 +233,7 @@ var ShowTimePage = (function () {
 }());
 ShowTimePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-show-time',template:/*ion-inline-start:"D:\Project\sf-cinema\src\pages\show-time\show-time.html"*/'<!--\n\n  Generated template for the ShowTimePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n	<ion-navbar>\n\n		<ion-title><img src="pic/sf.png" class="logo"></ion-title>\n\n	</ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n	<ion-card class="card" >\n\n			<ion-grid>\n\n					<ion-row>\n\n						<ion-col>\n\n							<img class="pic" src="pic/{{pic}}">\n\n						</ion-col>\n\n						<ion-col class="showTimeDetail">\n\n							ชื่อเรื่อง: {{nameTh}} <br> ประเภท: {{type}} <br> Rate: {{rate}} | {{minutes}} นาที <br>\n\n							<button ion-button (click)="movieTapped($event,movie)">Movie Detail</button>\n\n						</ion-col>\n\n					</ion-row>\n\n			\n\n				</ion-grid>\n\n	</ion-card>\n\n	\n\n\n\n	<ion-item>\n\n		<ion-label class="showTimeDetail">Date</ion-label>\n\n		<ion-select [(ngModel)]="showdate" class="showTimeDetail">\n\n			<ion-option value="13">13 Oct</ion-option>\n\n			<ion-option value="14">14 Oct</ion-option>\n\n			<ion-option value="15">15 Oct</ion-option>\n\n			<ion-option value="16">16 Oct</ion-option>\n\n			<ion-option value="17">17 Oct</ion-option>\n\n			<ion-option value="18">18 Oct</ion-option>\n\n		</ion-select>\n\n	</ion-item>\n\n	<ion-item *ngIf="showdate">\n\n		<ion-item *ngFor="let t of theater">\n\n			<div class="theaterList">{{t.name}}</div>\n\n			<div class="theaterList"> \n\n				<button ion-button (click)="ticketTapped($event,t,\'12:30\')">12:30</button>\n\n				<button ion-button (click)="ticketTapped($event,t,\'15:30\')">15:30</button>\n\n				<button ion-button (click)="ticketTapped($event,t,\'19:30\')">19:30</button>\n\n				<button ion-button (click)="ticketTapped($event,t,\'22:00\')">22:00</button>\n\n			</div>\n\n		</ion-item>\n\n	</ion-item>\n\n\n\n</ion-content>'/*ion-inline-end:"D:\Project\sf-cinema\src\pages\show-time\show-time.html"*/,
+        selector: 'page-show-time',template:/*ion-inline-start:"D:\sf-cinema\src\pages\show-time\show-time.html"*/'<!--\n\n  Generated template for the ShowTimePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n	<ion-navbar>\n\n		<ion-title><img src="pic/sf.png" class="logo"></ion-title>\n\n	</ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n	<ion-card class="card" >\n\n			<ion-grid>\n\n					<ion-row>\n\n						<ion-col>\n\n							<img class="pic" src="pic/{{pic}}">\n\n						</ion-col>\n\n						<ion-col class="showTimeDetail">\n\n							ชื่อเรื่อง: {{nameTh}} <br> ประเภท: {{type}} <br> Rate: {{rate}} | {{minutes}} นาที <br>\n\n							<button ion-button (click)="movieTapped($event,movie)">Movie Detail</button>\n\n						</ion-col>\n\n					</ion-row>\n\n			\n\n				</ion-grid>\n\n	</ion-card>\n\n	\n\n\n\n	<ion-item>\n\n		<ion-label class="showTimeDetail">Date</ion-label>\n\n		<ion-select [(ngModel)]="showdate" class="showTimeDetail">\n\n			<ion-option value="13">13 Oct</ion-option>\n\n			<ion-option value="14">14 Oct</ion-option>\n\n			<ion-option value="15">15 Oct</ion-option>\n\n			<ion-option value="16">16 Oct</ion-option>\n\n			<ion-option value="17">17 Oct</ion-option>\n\n			<ion-option value="18">18 Oct</ion-option>\n\n		</ion-select>\n\n	</ion-item>\n\n	<ion-item *ngIf="showdate">\n\n		<ion-item *ngFor="let t of theater">\n\n			<div class="theaterList">{{t.name}}</div>\n\n			<div class="theaterList"> \n\n				<button ion-button (click)="ticketTapped($event,t,\'12:30\')">12:30</button>\n\n				<button ion-button (click)="ticketTapped($event,t,\'15:30\')">15:30</button>\n\n				<button ion-button (click)="ticketTapped($event,t,\'19:30\')">19:30</button>\n\n				<button ion-button (click)="ticketTapped($event,t,\'22:00\')">22:00</button>\n\n			</div>\n\n		</ion-item>\n\n	</ion-item>\n\n\n\n</ion-content>'/*ion-inline-end:"D:\sf-cinema\src\pages\show-time\show-time.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_data_data__["a" /* DataProvider */]])
 ], ShowTimePage);
@@ -301,7 +304,7 @@ __decorate([
 ], ShowingPage.prototype, "slides", void 0);
 ShowingPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-showing',template:/*ion-inline-start:"D:\Project\sf-cinema\src\pages\showing\showing.html"*/'<!--\n\n  Generated template for the ShowingPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title class="title" align-title="center"><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="body">\n\n\n\n<ion-slides autoplay="5000" loop="true" class="slide" (ionSlideDidChange)="slideChanged()">\n\n  <ion-slide *ngIf="promotions[0].picc" (click)="promoTapped($event,promotions[0])">\n\n    <img src="pic/{{promotions[0].picc}}">\n\n  </ion-slide>\n\n  <ion-slide *ngIf="promotions[1].picc" (click)="promoTapped($event,promotions[1])">\n\n    <img src="pic/{{promotions[1].picc}}">\n\n  </ion-slide>\n\n  <ion-slide *ngIf="promotions[2].picc" (click)="promoTapped($event,promotions[2])">\n\n    <img src="pic/{{promotions[2].picc}}">\n\n  </ion-slide>\n\n  <ion-slide *ngIf="promotions[3].picc" (click)="promoTapped($event,promotions[3])">\n\n    <img src="pic/{{promotions[3].picc}}">\n\n  </ion-slide>\n\n  <ion-slide *ngIf="promotions[4].picc" (click)="promoTapped($event,promotions[4])">\n\n    <img src="pic/{{promotions[4].picc}}">\n\n  </ion-slide>\n\n</ion-slides>\n\n\n\n  <ion-grid class="grid">\n\n    <ion-row >\n\n      <ion-col *ngFor="let m of movies" col-4 (click)="movieTapped($event,m)">\n\n        <img src="pic/{{m.pic}}" class="picMovie">\n\n        <div class="date">{{m.date}}</div> \n\n        <div class="showing">{{m.nameTh}}</div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Project\sf-cinema\src\pages\showing\showing.html"*/,
+        selector: 'page-showing',template:/*ion-inline-start:"D:\sf-cinema\src\pages\showing\showing.html"*/'<!--\n\n  Generated template for the ShowingPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title class="title" align-title="center"><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="body">\n\n\n\n<ion-slides autoplay="5000" loop="true" class="slide" (ionSlideDidChange)="slideChanged()">\n\n  <ion-slide *ngIf="promotions[0].picc" (click)="promoTapped($event,promotions[0])">\n\n    <img src="pic/{{promotions[0].picc}}">\n\n  </ion-slide>\n\n  <ion-slide *ngIf="promotions[1].picc" (click)="promoTapped($event,promotions[1])">\n\n    <img src="pic/{{promotions[1].picc}}">\n\n  </ion-slide>\n\n  <ion-slide *ngIf="promotions[2].picc" (click)="promoTapped($event,promotions[2])">\n\n    <img src="pic/{{promotions[2].picc}}">\n\n  </ion-slide>\n\n  <ion-slide *ngIf="promotions[3].picc" (click)="promoTapped($event,promotions[3])">\n\n    <img src="pic/{{promotions[3].picc}}">\n\n  </ion-slide>\n\n  <ion-slide *ngIf="promotions[4].picc" (click)="promoTapped($event,promotions[4])">\n\n    <img src="pic/{{promotions[4].picc}}">\n\n  </ion-slide>\n\n</ion-slides>\n\n\n\n  <ion-grid class="grid">\n\n    <ion-row >\n\n      <ion-col *ngFor="let m of movies" col-4 (click)="movieTapped($event,m)">\n\n        <img src="pic/{{m.pic}}" class="picMovie">\n\n        <div class="date">{{m.date}}</div> \n\n        <div class="showing">{{m.nameTh}}</div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\sf-cinema\src\pages\showing\showing.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_data_data__["a" /* DataProvider */]])
 ], ShowingPage);
@@ -351,7 +354,7 @@ var TheaterPage = (function () {
 }());
 TheaterPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-theater',template:/*ion-inline-start:"D:\Project\sf-cinema\src\pages\theater\theater.html"*/'<!--\n\n  Generated template for the TheaterPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-list-header class="theaterHeader">All of Theaters</ion-list-header>\n\n    <ion-item *ngFor="let t of theaterDetail" class="theaterList" no-lines>\n\n      <ion-icon name="ios-star-outline" ></ion-icon>\n\n      {{t.name}}\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Project\sf-cinema\src\pages\theater\theater.html"*/,
+        selector: 'page-theater',template:/*ion-inline-start:"D:\sf-cinema\src\pages\theater\theater.html"*/'<!--\n  Generated template for the TheaterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <ion-list-header class="theaterHeader">All of Theaters</ion-list-header>\n    <ion-item *ngFor="let t of theaterDetail" class="theaterList" no-lines>\n      <ion-icon name="ios-star-outline" ></ion-icon>\n      {{t.name}}\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"D:\sf-cinema\src\pages\theater\theater.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_data_data__["a" /* DataProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
 ], TheaterPage);
@@ -464,7 +467,7 @@ var TabsPage = (function () {
     return TabsPage;
 }());
 TabsPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"D:\Project\sf-cinema\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Now Showing" tabIcon="ios-play-outline"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Theater" tabIcon="ios-compass-outline"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Coming Soon" tabIcon="ios-calendar-outline"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle="Promotion" tabIcon="ios-more"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"D:\Project\sf-cinema\src\pages\tabs\tabs.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"D:\sf-cinema\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Now Showing" tabIcon="ios-play-outline"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Theater" tabIcon="ios-compass-outline"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Coming Soon" tabIcon="ios-calendar-outline"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle="Promotion" tabIcon="ios-more"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"D:\sf-cinema\src\pages\tabs\tabs.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], TabsPage);
@@ -631,7 +634,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"D:\Project\sf-cinema\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"D:\Project\sf-cinema\src\app\app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"D:\sf-cinema\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"D:\sf-cinema\src\app\app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
@@ -671,7 +674,8 @@ var DataProvider = (function () {
     function DataProvider(http) {
         this.http = http;
         this.movies = [];
-        this.moviesComing = [];
+        this.moviesComingOctober = [];
+        this.moviesComingNovember = [];
         this.theatres = [];
         this.promotions = [];
         console.log('Hello DataProvider Provider');
@@ -854,8 +858,8 @@ var DataProvider = (function () {
         ];
         return this.promotions;
     };
-    DataProvider.prototype.getMovieComing = function () {
-        this.moviesComing =
+    DataProvider.prototype.getMovieComingOctober = function () {
+        this.moviesComingOctober =
             [{
                     nameTh: "ขอตายวูบเดียว", nameEn: "Flatliners", date: "19 October 2017", type: "Drama", rate: "15+",
                     pic: "flatliners.jpg",
@@ -893,15 +897,57 @@ var DataProvider = (function () {
                     plot: "ติดตามเรื่องย่อได้เร็วๆ นี้"
                 },
             ];
-        return this.moviesComing;
+        return this.moviesComingOctober;
+    };
+    DataProvider.prototype.getMovieComingNovember = function () {
+        this.moviesComingNovember =
+            [{
+                    nameTh: "หัวใจไม่แพ้", nameEn: "Stronger", date: "02 November 2017", type: "Drama", rate: "15+",
+                    pic: "stronger.jpg",
+                    minutes: "120", directed: "David Gordon Green", starring: ["Clancy Brown", "Jake Gyllenhaal", "Tatiana Maslany"],
+                    plot: "เรื่องจริงของชายที่ไม่ย่อท้อต่อโชคชะตา เจฟฟ์ เบาว์แมน ชายธรรมดาทั่วไปวัย 27 ปี ที่กำลังวาดอนาคตกับ อีริน แฟนสาวไว้อย่างสวยงาม แต่ทุกอย่างกลับพังทะลายเมื่อ เจฟฟ์ กลายเป็นหนึ่งในเหยื่อที่โดนลูกหลงจากการวางระเบิดที่งานบอสตันมาราธอน เจฟฟ์ ตื่นมาในวันอังคารที่ 16 เมษายน 2013 ที่โรงพยาบาลหลังจากทีมแพทย์ผ่าตัดเพื่อรักษาชีวิตเขาแต่ก็ต้องแลกมาด้วยขาทั้งสองข้าง เมื่อ เจฟฟ์ รู้สึกตัวเขากลายมาเป็นฟันเฟืองสำคัญในการตามล่า 2 ผู้ก่อการร้ายมารับผิด โดยไม่ทันได้รู้เลยว่าภาพถ่ายของเขาที่ขาห้อยต่องแต่งจะกลายมาเป็นภาพที่เป็นตัวแทนของความโหดร้ายในเหตุการณ์ครั้งนี้ แม้ว่า เจฟฟ์ ต้องสูญเสียขาทั้งสองข้างไป แต่คำว่ายอมแพ้ไม่เคยเป็นตัวเลือกของเขา เจฟฟ์ ยิ้มรับกับเรื่องที่เกิด มองโลกในแง่ดี และทำทุกอย่างเพื่อให้กลับมาเดินได้อีกครั้ง เรื่องราวของเขาจะมอบแรงใจให้กับคนที่กำลังท้อถอย"
+                },
+                {
+                    nameTh: "The Killing of a Sacred Deer", nameEn: "The Killing of a Sacred Deer", date: "02 November 2017", type: "Drama", rate: "ทั่วไป",
+                    pic: "killing.jpg",
+                    minutes: "120", directed: "Yorgos Lanthimos", starring: ["Colin Ferrell", "Nicole Kidman", "Alicia Silverstone"],
+                    plot: "ติดตามเรื่องย่อได้เร็วๆ นี้"
+                },
+                {
+                    nameTh: "คอลอสซาน ทั้งจักรวาลเป็นของเธอ", nameEn: "Colossal", date: "09 November 2017", type: "Action", rate: "ทั่วไป",
+                    pic: "colossal.jpg",
+                    minutes: "", directed: "Nacho Vigalondo", starring: ["Jason Sudeikis", "Anne Hathaway", "Austin Stowell"],
+                    plot: "กลอเรีย (Anne Hathaway) เป็นสาวปาร์ตี้ที่ไม่ได้ทำงาน หลังจากถูกแฟนหนุ่มไล่ออกจากอพาร์ตเมนต์ บังคับให้เธอต้องย้ายจากนิวยอร์ก กลับไปบ้านเกิดของเธอ เมื่อข่าวรายงานว่าสิ่งมีชีวิตขนาดยักษ์กำลังทำลายกรุงโซล เกาหลีใต้ กลอเรียก็ค่อยๆ ตระหนักว่าเธอเกี่ยวข้องกับปรากฏการณ์อันไกลโพ้นนี้ เมื่อเหตุการณ์เริ่มควบคุมไม่ได้ กลอเรียต้องตัดสินใจว่า ทำไมการมีชีวิตที่ไม่มีนัยสาคัญของเธอ ดูเหมือนจะมีผลมหาศาลต่อชะตากรรมของโลก"
+                },
+                {
+                    nameTh: "Only the Brave", nameEn: "Only the Brave", date: "09 November 2017", type: "Biography", rate: "ทั่วไป",
+                    pic: "only.jpg",
+                    minutes: "", directed: "Joseph Kosinski", starring: ["Jennifer Connelly", "Miles Teller", "Taylor Kitsch"],
+                    plot: "โจเซฟ โคซินสกี้ จัดเป็นสุดยอดผู้กำกับสายไซไฟ ที่เคยฝากผลงานวิสัยทัศน์ล้าไว้ใน Tron Legacy และ Oblivion ขอผนึกกาลังกับโปรดิวเซอร์มากฝีมือ ลอเรนโซ ดิ โบนาเวนทูรา ที่อยู่เบื้องหลังความสำเร็จของหนังอย่าง Transformers และ Deepwater Horizon หยิบเอาเรื่องจริงของหน่วย แกรนิต เมาท์เท่น ฮอตช็อตส์ กลุ่มนักผจญเพลิงที่ต้องรับมือกับไฟป่าครั้งร้ายแรงที่สุดที่พร้อมจะเปลี่ยนผืนป่าขนาดใหญ่ให้เป็นนรกบนดิน เพื่อปกป้องตัวเมืองอริโซน่าเอาไว้พวกเขาทำงานโดยไม่คำนึงถึงชีวิตตัวเองเพื่อช่วยเหลือคนที่พวกเขารัก เรื่องราวของมิตรภาพ ความเสียสละ และความกล้าหาญ และวีรกรรมที่โลกไม่รู้ลืม"
+                },
+                {
+                    nameTh: "The Big Sick", nameEn: "The Big Sick", date: "09 November 2017", type: "v", rate: "ทั่วไป",
+                    pic: "big.jpg",
+                    minutes: "120", directed: "Michael Showalter", starring: ["Holly Hunter", "Zoe Kazan", "Kumail Nanjiani"],
+                    plot: "ติดตามเรื่องย่อได้เร็วๆ นี้"
+                },
+                {
+                    nameTh: "สุขสันต์วันตาย", nameEn: "Happy Death Day", date: "23 November 2017", type: "Horror", rate: "18+",
+                    pic: "happy.jpg",
+                    minutes: "", directed: "Christopher Landon", starring: ["Israel Broussard", "Jessica Rothe", "ruby Modine"],
+                    plot: "เรื่องราวของนักศึกษามหาวิทยาลัย ที่เล่าย้อนถึงวันที่เธอถูกฆาตกรรมอย่างผิดปกติและน่าสะพรึงกลัว จนกระทั่งเธอค้นพบใครกันแน่ที่ลงมือฆาตกรรม"
+                },
+            ];
+        return this.moviesComingNovember;
     };
     return DataProvider;
 }());
 DataProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
 ], DataProvider);
 
+var _a;
 //# sourceMappingURL=data.js.map
 
 /***/ }),
@@ -964,12 +1010,11 @@ var TicketPage = (function () {
 }());
 TicketPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-ticket',template:/*ion-inline-start:"D:\Project\sf-cinema\src\pages\ticket\ticket.html"*/'<!--\n\n  Generated template for the TicketPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>ticket</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding >\n\n  <div class="header"> {{theater}} </div>\n\n  <ion-grid class="grid">\n\n    <ion-row>\n\n      <ion-col>\n\n        <div class="screen">S C R E E N</div>\n\n      </ion-col>\n\n    </ion-row><br>\n\n    <ion-row >\n\n      <ion-col col-12>\n\n        <img src="pic/{{t1.pic}}.jpg" *ngFor="let t1 of totalSeat1" class="seat" (click)="byTickets(t1)">\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row>\n\n    </ion-row><br>\n\n    <ion-row >\n\n      <ion-col col-12>\n\n        <img src="pic/{{t2.pic}}.jpg" *ngFor="let t2 of totalSeat2" class="seat" (click)="byTickets(t2)">\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row >\n\n        <ion-col style="text-align: center">\n\n          <img src="pic/{{vip.pic}}.jpg" *ngFor="let vip of totalSeatVip" class="vip" (click)="byTickets(vip)">\n\n        </ion-col> \n\n    </ion-row>\n\n\n\n    \n\n    \n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Project\sf-cinema\src\pages\ticket\ticket.html"*/,
+        selector: 'page-ticket',template:/*ion-inline-start:"D:\sf-cinema\src\pages\ticket\ticket.html"*/'<!--\n\n  Generated template for the TicketPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>ticket</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding >\n\n  <div class="header"> {{theater}} </div>\n\n  <ion-grid class="grid">\n\n    <ion-row>\n\n      <ion-col>\n\n        <div class="screen">S C R E E N</div>\n\n      </ion-col>\n\n    </ion-row><br>\n\n    <ion-row >\n\n      <ion-col col-12>\n\n        <img src="pic/{{t1.pic}}.jpg" *ngFor="let t1 of totalSeat1" class="seat" (click)="byTickets(t1)">\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row>\n\n    </ion-row><br>\n\n    <ion-row >\n\n      <ion-col col-12>\n\n        <img src="pic/{{t2.pic}}.jpg" *ngFor="let t2 of totalSeat2" class="seat" (click)="byTickets(t2)">\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row >\n\n        <ion-col style="text-align: center">\n\n          <img src="pic/{{vip.pic}}.jpg" *ngFor="let vip of totalSeatVip" class="vip" (click)="byTickets(vip)">\n\n        </ion-col> \n\n    </ion-row>\n\n\n\n    \n\n    \n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\sf-cinema\src\pages\ticket\ticket.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
 ], TicketPage);
 
-var _a, _b;
 //# sourceMappingURL=ticket.js.map
 
 /***/ }),
@@ -1011,7 +1056,7 @@ var PromotionDetailPage = (function () {
 }());
 PromotionDetailPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-promotion-detail',template:/*ion-inline-start:"D:\Project\sf-cinema\src\pages\promotion-detail\promotion-detail.html"*/'<!--\n\n  Generated template for the PromotionDetailPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding >\n\n\n\n<ion-card >\n\n	<ion-card-header>\n\n	    <div class="promotionHeader">{{promotionDetail.name}}</div>\n\n	</ion-card-header>\n\n	<ion-card-content >\n\n    <img src="pic/{{promotionDetail.pic}}" class="picMovie" >\n\n    <br>\n\n    <ion-list-header class="detail" no-lines>รายละเอียดโปรโมชั่น</ion-list-header>\n\n		<div class="promotionDetail">{{promotionDetail.detail}}</div>\n\n  <br>\n\n  <ion-list-header class="detail" no-lines>ระยะเวลาโปรโมชั่น</ion-list-header>\n\n  <div class="promotionDetail">{{promotionDetail.date}}</div>\n\n  <br>\n\n  <ion-list-header class="detail" no-lines>ข้อกำหนดหรือเงื่อนไข</ion-list-header>\n\n  <ion-list *ngFor="let con of promotionDetail.condition">\n\n  <div class="promotionDetail">- {{con}}</div>\n\n  </ion-list>\n\n  <br>\n\n  <ion-list-header class="detail" no-lines>สาขาที่ร่วมรายการ</ion-list-header>\n\n  <div class="promotionDetail">{{promotionDetail.branches}}</div>\n\n</ion-card-content>\n\n</ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Project\sf-cinema\src\pages\promotion-detail\promotion-detail.html"*/,
+        selector: 'page-promotion-detail',template:/*ion-inline-start:"D:\sf-cinema\src\pages\promotion-detail\promotion-detail.html"*/'<!--\n\n  Generated template for the PromotionDetailPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding >\n\n\n\n<ion-card >\n\n	<ion-card-header>\n\n	    <div class="promotionHeader">{{promotionDetail.name}}</div>\n\n	</ion-card-header>\n\n	<ion-card-content >\n\n    <img src="pic/{{promotionDetail.pic}}" class="picMovie" >\n\n    <br>\n\n    <ion-list-header class="detail" no-lines>รายละเอียดโปรโมชั่น</ion-list-header>\n\n		<div class="promotionDetail">{{promotionDetail.detail}}</div>\n\n  <br>\n\n  <ion-list-header class="detail" no-lines>ระยะเวลาโปรโมชั่น</ion-list-header>\n\n  <div class="promotionDetail">{{promotionDetail.date}}</div>\n\n  <br>\n\n  <ion-list-header class="detail" no-lines>ข้อกำหนดหรือเงื่อนไข</ion-list-header>\n\n  <ion-list *ngFor="let con of promotionDetail.condition">\n\n  <div class="promotionDetail">- {{con}}</div>\n\n  </ion-list>\n\n  <br>\n\n  <ion-list-header class="detail" no-lines>สาขาที่ร่วมรายการ</ion-list-header>\n\n  <div class="promotionDetail">{{promotionDetail.branches}}</div>\n\n</ion-card-content>\n\n</ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\sf-cinema\src\pages\promotion-detail\promotion-detail.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
 ], PromotionDetailPage);
