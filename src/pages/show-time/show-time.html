@@ -45,10 +45,10 @@
 		<ion-item *ngFor="let t of theater">
 			<div class="theaterList">{{t.name}}</div>
 			<div class="theaterList"> 
-				<button ion-button (click)="ticketTapped($event,t,'12:30')">12:30</button>
-				<button ion-button (click)="ticketTapped($event,t,'15:30')">15:30</button>
-				<button ion-button (click)="ticketTapped($event,t,'19:30')">19:30</button>
-				<button ion-button (click)="ticketTapped($event,t,'22:00')">22:00</button>
+				<button ion-button (click)="ticketTapped($event,t,'12:30',showdate)">12:30</button>
+				<button ion-button (click)="ticketTapped($event,t,'15:30',showdate)">15:30</button>
+				<button ion-button (click)="ticketTapped($event,t,'19:30',showdate)">19:30</button>
+				<button ion-button (click)="ticketTapped($event,t,'22:00',showdate)">22:00</button>
 			</div>
 		</ion-item>
 	</ion-item>
