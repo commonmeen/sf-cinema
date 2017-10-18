@@ -1,6 +1,28 @@
 page-show-time {
 	.pic {
-		width : 25% ;
-		hight : 25% ;
+		width : 100% ;
+		margin: auto;
+
+	}
+	.showTimeDetail{
+        font-size: 10pt;
+        color: #4F4F4F;      
+        font-family: 'Athiti', sans-serif;
+		font-weight: bold;
+		margin-top: 5%;
+		margin-left: 2%;	
+	}
+	.logo{
+        width: 25%;
+		margin: auto;
+	}
+	.theaterList{
+        font-size: 10pt;
+        font-weight: bold;
+        color: #4F4F4F;
+        font-family: 'Athiti', sans-serif;
+	}
+	.card{
+		padding: 0px;
 	}
 }

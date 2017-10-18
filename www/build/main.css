@@ -25637,8 +25637,33 @@ page-promotion-detail .logo {
 }
 
 page-show-time .pic {
+  width: 100%;
+  margin: auto;
+}
+
+page-show-time .showTimeDetail {
+  font-size: 10pt;
+  color: #4F4F4F;
+  font-family: 'Athiti', sans-serif;
+  font-weight: bold;
+  margin-top: 5%;
+  margin-left: 2%;
+}
+
+page-show-time .logo {
   width: 25%;
-  hight: 25%;
+  margin: auto;
+}
+
+page-show-time .theaterList {
+  font-size: 10pt;
+  font-weight: bold;
+  color: #4F4F4F;
+  font-family: 'Athiti', sans-serif;
+}
+
+page-show-time .card {
+  padding: 0px;
 }
 
 page-showing .showing {
@@ -25698,6 +25723,8 @@ page-theater .logo {
 
 page-ticket .seat {
   width: 7%;
+  margin: 0%;
+  padding: 0%;
 }
 
 page-ticket .screen {
@@ -25715,4 +25742,13 @@ page-ticket .vip {
   margin-right: 5%;
   margin-bottom: 0px;
   margin: 6px;
+  align: center;
+}
+
+page-ticket .header {
+  font-size: 10pt;
+  font-weight: bold;
+  color: #4F4F4F;
+  font-family: 'Athiti', sans-serif;
+  text-align: center;
 }

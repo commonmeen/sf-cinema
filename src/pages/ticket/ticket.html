@@ -14,7 +14,7 @@
 
 
 <ion-content padding >
-  
+  <div class="header"> {{theater}} </div>
   <ion-grid class="grid">
     <ion-row>
       <ion-col>
@@ -23,19 +23,19 @@
     </ion-row><br>
     <ion-row >
       <ion-col col-12>
-        <img src="pic/sofa.jpg" *ngFor="let t of totalSeat" class="seat" (click)="byTicket(t)">
+        <img src="pic/{{t1.pic}}.jpg" *ngFor="let t1 of totalSeat1" class="seat" (click)="byTickets(t1)">
       </ion-col>
     </ion-row>
     <ion-row>
     </ion-row><br>
     <ion-row >
       <ion-col col-12>
-        <img src="pic/sofa.jpg" *ngFor="let t of totalSeat" class="seat" (click)="byTicket(t)">
+        <img src="pic/{{t2.pic}}.jpg" *ngFor="let t2 of totalSeat2" class="seat" (click)="byTickets(t2)">
       </ion-col>
     </ion-row>
     <ion-row >
-        <ion-col>
-          <img src="pic/vip.png" *ngFor="let vip of totalSeatVip" class="vip" (click)="byTicket(t)">
+        <ion-col style="text-align: center">
+          <img src="pic/vip.png" *ngFor="let vip of totalSeatVip" class="vip" (click)="byTickets(vip)">
         </ion-col>
     </ion-row>
 

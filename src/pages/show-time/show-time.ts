@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MovieDetailPage } from '../movie-detail/movie-detail' ;
 import { DataProvider } from '../../providers/data/data' ;
-import { } from '';
+import { TicketPage } from '../ticket/ticket';
 /**
  * Generated class for the ShowTimePage page.
  *
@@ -13,7 +13,7 @@ import { } from '';
 @IonicPage()
 @Component({
   selector: 'page-show-time',
-  templateUrl: 'show-time.html',
+  templateUrl: 'show-time.html', 
 })
 export class ShowTimePage {
   theater : Array<any> = [] ;
@@ -39,7 +39,7 @@ export class ShowTimePage {
     this.pic = navParams.get("pic");
     this.minutes = navParams.get("minutes");
     this.directed = navParams.get("directed");
-    this.starring = navParams.get("starring");
+    this.starring = navParams.get("starring"); 
     this.plot = navParams.get("plot");
     this.theater = data.getTheatre();
     console.log(this.movie) ;
@@ -54,8 +54,10 @@ export class ShowTimePage {
     this.navCtrl.push(MovieDetailPage,movie) ;
   }
 
-  ticketTapped($event,theater){
-	this.navCtrl.push(MovieDetailPage,theater) ;
+  ticketTapped($event,theater,time:string){  	
+  	var i = theater.name +/* "  " + showdate + */"  " + time ;
+	this.navCtrl.push(TicketPage,i) ;
+	//this.navCtrl.push(TicketPage,time) ; 
   }
 
 }

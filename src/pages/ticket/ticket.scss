@@ -1,6 +1,8 @@
 page-ticket {
     .seat{
         width: 7%;
+        margin: 0%;
+        padding : 0%;
     }
     .screen{
         font-size: 15pt;
@@ -16,8 +18,13 @@ page-ticket {
         margin-right: 5%;
         margin-bottom: 0px;
         margin: 6px;
-
-     
-
+        align : center ;
+    }
+    .header{
+        font-size: 10pt;
+        font-weight: bold;
+        color: #4F4F4F;
+        font-family: 'Athiti', sans-serif;
+        text-align : center ;
     }
 }

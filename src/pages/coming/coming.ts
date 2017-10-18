@@ -18,7 +18,7 @@ export class ComingPage {
   movieComing:Array<any>=[];
 
 
-  constructor(private data:DataProvider, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public data:DataProvider, public navCtrl: NavController, public navParams: NavParams) {
     this.movieComing = data.getMovieComing();
   }
 
