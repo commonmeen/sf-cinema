@@ -13,7 +13,8 @@ export class DataProvider {
   movies : Array<any> = [];
   moviesComingOctober : Array<any> = [];
   moviesComingNovember : Array<any> = [];
-	theatres : Array<any> = [];
+  moviesComingDecember : Array<any> = [];
+  theatres : Array<any> = [];
 	promotions : Array<any> = [] ;
   constructor(public http: Http) {
     console.log('Hello DataProvider Provider');
@@ -317,9 +318,82 @@ export class DataProvider {
         plot: "เรื่องราวของนักศึกษามหาวิทยาลัย ที่เล่าย้อนถึงวันที่เธอถูกฆาตกรรมอย่างผิดปกติและน่าสะพรึงกลัว จนกระทั่งเธอค้นพบใครกันแน่ที่ลงมือฆาตกรรม"
       },
 
+      {
+        nameTh: "Jigsaw", nameEn: "Jigsaw", date: "30 November 2017", type: "Horror", rate: "18+",
+        pic: "jigsaw.jpg",
+        minutes: "91", directed: "Peter Spierig", starring: ["Tobin Bell", "Matt Passmore", "Laura Vandervoort"],
+        plot: "การกลับมาอีกครั้งของ Jigsaw ฆาตกรโรคจิตอัจฉริยะที่โหดสุดในประวัติศาสตร์ ปรากฏการณ์เลือดท่วมจอครั้งนี้เกิดขึ้นเมื่อตารวจพบศพที่ล้วนแล้วจบชีวิตด้วยวิธีสุดวิปลาศ ซึ่งทุกหลักฐานและการสืบสวนชี้ไปที่ จอห์น เครเมอร์ Jigsaw ต้นตารับที่ตายไปแล้วหลายปี ปริศนาแห่งการตามล่าจึงอุบัติขึ้นก่อนที่จะมีใครจะตกเป็นเหยื่อการทรมานสุดวิปริตของมัน"
+      },
 
+      {
+        nameTh: "เรเนเกดส์ ทีมยุทธการล่าโคตรทองใต้สมุทร", nameEn: "Renegades", date: "30 November 2017", type: "Action", rate: "15+",
+        pic: "renegades.jpg",
+        minutes: "105", directed: "Steven Quale", starring: ["Dimitri Leonidas", "Ewan Bremner", "Sullivan Stapieton"],
+        plot: "เรื่องราวของหน่วยนาวีซีล ที่ต้องต่อสู้เพื่อปกป้องสมบัติมหาศาลในห้วงน้ำลึก เมื่อค้นพบสมบัติใต้น้ำในทะเลสาบบอสเนีย"
+      },
+
+      {
+        nameTh: "Wind River", nameEn: "Wind River", date: "30 November 2017", type: "Action", rate: "15+",
+        pic: "wind.jpg",
+        minutes: "107", directed: "Taylor Sheridan", starring: ["Kelsey Asbille", "Elizabeth Olsen", "Jermy Renner"],
+        plot: "(อลิซาเบธ โอลเซ่น) รับบท เป็นเอฟบีไอสาวที่ต้องไปทำคดีตามลำพังในเขตสงวนของชาวพื้นเมืองอเมริกัน หลังจากมีการพบศพหญิงสาวนอนหน้ำคว่ำอยู่กลางหิมะ (เจเรมี เรนเนอร์) รับบทเป็นเจ้าหน้าที่ควบคุมดูแลการล่าสัตว์ของพื้นที่ที่ไปพบศพและถูกเธอขอให้มาช่วยสืบคดี"
+      },
     ]
 
       return this.moviesComingNovember ;
+  }
+
+
+
+  getMovieComingDecember() : Array<any> {
+  	this.moviesComingDecember =
+  	[	{
+        nameTh: "แฮร์รี่ โฮล กับคดีฆาตกรมนุษย์หิมะ", nameEn: "The Snowman", date: "07 December 2017", type: "Crime", rate: "18+",
+        pic: "snowman.jpg",
+        minutes: "125", directed: "Tomas Alfredson", starring: ["Michael Fassbender","Rebecca Ferguson","val Kilmer"],
+        plot: "เมื่อหัวหน้าทีมนักสืบ (ฟาสส์เบนเดอร์) นำทีมสืบสวนคดีอาชญากรรมการหายตัวไปของเหยื่อในวันหิมะตกครั้งแรกในฤดูหนาว เขากลัวว่าฆาตกรต่อเนื่องซึ่งยังหลบหนีอยู่อาจกลับมาอีกครั้ง หากเขาหวังที่จะชิงไหวชิงพริบกับปีศาจร้ายก่อนที่หิมะจะตกอีกครั้ง ตำรวจต้องเชื่อมต่อคดีเก่าหลายสิบปีเข้ากับคดีใหม่สุดโหด ด้วยความช่วยเหลือของสมาชิกใหม่ (เฟอร์กูสัน)" 
+      },
+
+      {
+        nameTh: "Better Watch Out", nameEn: "Better Watch Out", date: "07 December 2017", type: "Horror", rate: "18+",
+        pic: "watch.jpg",
+        minutes: "85", directed: "Chris Peckover", starring: ["Virginia Madasen", "Dacre Montgomery", "Patrick Warburton"],
+        plot: "เมื่อพ่อกับแม่ของ ลุค เด็กชายวัย 12 ปี (แสดงโดย เลวี มิลเลอร์) พากันออกไปต่างเมืองเพื่อไปฉลองวันคริสต์มากัน โดยทิ้งเขาเอาไว้กับพี่เลี้ยงสาวสวย แอชลี่ย์ (แสดงโดย โอลิเวีย ดีจอนจ์) และ การ์เรต (แสดงโดย เอ็ด ออกเซนบาวน์) เพื่อนที่เป็นเด็กเนิร์ด ตามลำพัง แต่ค่ำคืนอันเงียบสงบของพวกเขาถูกรุกรานจากโจรร้ายหมายจะปล้นชิงทรัพย์ ทำให้ตัวตนอีกด้านหนึ่งของลุคได้เปิดเผยออกมา ลุคได้เริ่มแผนการวางกับดักสารพัดสังหาร เพื่อลงโทษเหล่าโจร และคนรอบข้างที่มารบกวนค่ำคืนอันแสนสุขของเขา"
+      },
+
+      {
+        nameTh: "สตาร์ วอร์ส: ปัจฉิมบทแห่งเจได", nameEn: "Star Wars: The Last Jedi", date: "14 December 2017", type: "Action", rate: "ทั่วไป",
+        pic: "star.jpg",
+        minutes: "", directed: "Rian Johnson", starring: ["John boyega", "Mark Hamil", "Daisy Ridley"],
+        plot: "Star Wars: The Last Jedi จะสานต่อเรื่องราวจาก The Force Awakens โดยมีกระแสว่า เรย์ จะฝึกซ้อมการเป็นเจไดกับ ลุค สกายวอล์คเกอร์ ขณะที่ ไคโล เรน จะลักพาตัว ฟินน์ ที่กำลังทำภารกิจร่วมกับเพื่อนใหม่ ส่วนทางด้าน โพ ดาเมรอน ก็กำลังร่วมมือกับนายพลหญิง เลอา ในการล่อให้ เรย์ ออกมาจากที่ซ่อน ยิ่งไปกว่านั้นเราจะได้เห็นการประลองดาบไลท์เซเบอร์ระหว่าง เรย์ กับ ไคโล เรน"
+      },
+
+      {
+        nameTh: "Wonder", nameEn: "Wonder", date: "14 December 2017", type: "Drama", rate: "ทั่วไป",
+        pic: "wonder.jpg",
+        minutes: "113", directed: "Stephen Chbosky", starring: ["Jolia Roberts", "Jacob Tremblay", "Owen Wilson"],
+        plot: "เรื่องราวของ ออกัสต์ พูลล์แมน เด็กชายอายุ 10 ขวบที่บ้าสตาร์วอร์ส ชอบกินไอติม ติดเกม และ มีครอบครัวที่อบอุ่น แม่ที่รักเขาที่สุดในโลก แต่ ออกัสต์ ป่วยด้วยโรค Mandibulofacial Dysostosis ( โรคปากแหว่งเพดานโหว่ ) ตั้งแต่แรกเกิด จน อายุ 10 ขวบ ออกัสต์ เข้ารับการผ่าตัดใบหน้ามาแล้วกว่า 27 ครั้ง คนแปลกหน้ามักเบือนหน้าหนีเมื่อเห็นหน้าเขา หลายคนมองว่า ออกัสต์ มีหน้าตาที่น่าเกลียด จนไม่อยากเข้าใกล้ แต่ คนใกล้ตัว และออกัส กลับไม่คิดแบบนั้น เขาเป็นแค่ เด็กชายตัวน้อยที่อยากกินไอติมโดยที่เด็กคนอื่นๆเห็นว่าเขากิน”จริงๆ” เขาอยากแต่งชุดซุปเปอร์ฮีโร่โดยไม่ต้องคอยสวมหน้ากากปิดใบหน้า เขาอยากไปโรงเรียนและเล่นกับเด็กทั่วไปอย่างปกติสุข หนังจะบอกเล่าผ่านมุมมองและความนึกคิดของตัวละครแต่ละตัว เริ่มต้นจากตัวของเด็กชาย แล้วตามด้วยพ่อแม่ พี่สาว เพื่อนคนแรก เพื่อนที่คอยแกล้ง เพื่อนที่คอยช่วยเหลือ ผ่านมุมมองของเด็กชายตัวเล็ก ที่มีหัวใจดวงโต และ น่ารักที่สุดในโลก เด็กชายที่มีชื่อว่า  ออกัสต์ พูลล์แมน"
+      },
+
+      {
+        nameTh: "Suburbicon", nameEn: "Suburbicon", date: "14 December 2017", type: "Crime", rate: "ทั่วไป",
+        pic: "suburbicon.jpg",
+        minutes: "104", directed: "George Clooney", starring: ["Matt Damon", "Oscar Isaac", "Julianne Moore"],
+        plot: "Suburbicon เป็นชื่อของหมู่บ้านชานเมืองในปี 1959 ที่สงบ เรียบร้อย น่าอยู่ เหมาะสำหรับการตั้งครอบครัว แต่เบื้องหน้าที่ดูเหมือนร่มรื่นนั้นแฝงไปด้วยเรื่องราวการหลอกลวง หักหลัง มาเฟีย และฆาตกรรมในหนังตลกร้ายแนวอาชญากรรมที่มีตัวละครหญิงร้ายชายเลวรับบทโดยแมต เดมอน, จูลี่แอน มัวร์ และ ออสการ์ ไอแซ็ค"
+      },
+
+      {
+        nameTh: "Ferdinand", nameEn: "Ferdinand", date: "21 December 2017", type: "Animation", rate: "ทั่วไป",
+        pic: "ferdinand.jpg",
+        minutes: "", directed: "Carlos Saldanha", starring: ["John Cena", "Daveed Diggs", "Kate McKinnon"],
+        plot: "Ferdinand ถ่ายทอดเรื่องราวของกระทิงยักษ์ที่มีใจกล้าหาญ หลังจากถูกเข้าใจผิดวาเป็นสัตว์อันตราย เขาถูกจับตัวไปและต้องพลัดพรากกับครอบครัว เขาพยายามหาทางกลับไปหาครอบครัว เขารวมตัวทีมสัตว์แปลกๆ เพื่อออกผจญภัย เรื่องราวในภาพยนตร์เกิดขึ้นที่สเปน ภาพยนตร์เรื่อง Ferdinand เป็นบทพิสูจน์ว่าคุณไม่อาจตัดสินกระทิงภายนอกของมันได้"
+      },
+
+
+      
+      
+
+    ]
+    return this.moviesComingDecember;
   }
 }

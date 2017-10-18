@@ -17,11 +17,13 @@ import { DataProvider } from '../../providers/data/data'
 export class ComingPage {
   movieComingOctober:Array<any>=[];
   movieComingNovember:Array<any>=[];
+  movieComingDecember:Array<any>=[];
 
 
   constructor(public data:DataProvider, public navCtrl: NavController, public navParams: NavParams) {
     this.movieComingOctober = data.getMovieComingOctober();
     this.movieComingNovember = data.getMovieComingNovember();
+    this.movieComingDecember = data.getMovieComingDecember();
   }
 
   ionViewDidLoad() {

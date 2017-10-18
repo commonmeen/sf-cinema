@@ -25546,6 +25546,15 @@ page-coming .body {
   background-color: #F7F7F9;
 }
 
+page-coming .dateHead {
+  font-size: 15pt;
+  color: #428bca;
+  text-align: center;
+  width: 100%;
+  font-family: 'Athiti', sans-serif;
+  font-weight: bold;
+}
+
 page-movie-detail .poster {
   text-align: center;
   margin: auto;
@@ -25751,4 +25760,9 @@ page-ticket .header {
   color: #4F4F4F;
   font-family: 'Athiti', sans-serif;
   text-align: center;
+}
+
+page-ticket .logo {
+  width: 25%;
+  margin: auto;
 }
