@@ -6,41 +6,51 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>showTime</ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<ion-title><img src="pic/sf.png" class="logo"></ion-title>
+	</ion-navbar>
 
-</ion-header> 
+</ion-header>
 
 
 <ion-content padding>
-	<ion-card>
-		<div> <img class="pic" src="pic/{{pic}}">
-		{{nameTh}} <br>
-		Genre : {{type}} <br>
-		Rate : {{rate}} | {{minutes}} mins </div>
-		<button color="primary" (click)="movieTapped($event,movie)">Movie Detail</button>
+	<ion-card class="card" >
+			<ion-grid>
+					<ion-row>
+						<ion-col>
+							<img class="pic" src="pic/{{pic}}">
+						</ion-col>
+						<ion-col class="showTimeDetail">
+							ชื่อเรื่อง: {{nameTh}} <br> ประเภท: {{type}} <br> Rate: {{rate}} | {{minutes}} นาที <br>
+							<button ion-button (click)="movieTapped($event,movie)">Movie Detail</button>
+						</ion-col>
+					</ion-row>
+			
+				</ion-grid>
 	</ion-card>
+	
+
 	<ion-item>
-  		<ion-label>Date</ion-label>
-  		<ion-select [(ngModel)]="showdate">
-    		<ion-option value="13">13 Oct</ion-option>
-    		<ion-option value="14">14 Oct</ion-option>
-    		<ion-option value="15">15 Oct</ion-option>
-    		<ion-option value="16">16 Oct</ion-option>
-    		<ion-option value="17">17 Oct</ion-option>
-    		<ion-option value="18">18 Oct</ion-option>
-  		</ion-select>
+		<ion-label class="showTimeDetail">Date</ion-label>
+		<ion-select [(ngModel)]="showdate" class="showTimeDetail">
+			<ion-option value="13">13 Oct</ion-option>
+			<ion-option value="14">14 Oct</ion-option>
+			<ion-option value="15">15 Oct</ion-option>
+			<ion-option value="16">16 Oct</ion-option>
+			<ion-option value="17">17 Oct</ion-option>
+			<ion-option value="18">18 Oct</ion-option>
+		</ion-select>
 	</ion-item>
 	<ion-item *ngIf="showdate">
-	<ion-item *ngFor="let t of theater">
-		{{t.name}}
-		<div> <button color="primary" (click)="ticketTapped($event,t)">12:30</button>
-		<button color="primary" (click)="ticketTapped($event,t)">15:30</button>
-		<button color="primary" (click)="ticketTapped($event,t)">19:30</button>
-		<button color="primary" (click)="ticketTapped($event,t)">22:00</button>
-		</div>
-	</ion-item>
+		<ion-item *ngFor="let t of theater">
+			<div class="theaterList">{{t.name}}</div>
+			<div class="theaterList"> 
+				<button ion-button (click)="ticketTapped($event,t)">12:30</button>
+				<button ion-button (click)="ticketTapped($event,t)">15:30</button>
+				<button ion-button (click)="ticketTapped($event,t)">19:30</button>
+				<button ion-button (click)="ticketTapped($event,t)">22:00</button>
+			</div>
+		</ion-item>
 	</ion-item>
 
 </ion-content>
