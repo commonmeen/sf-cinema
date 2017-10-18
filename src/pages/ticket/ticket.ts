@@ -16,8 +16,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class TicketPage {
   totalSeat1:Array<any>=[];
   totalSeat2:Array<any>=[];
-  totalSeatVip:Array<string>=[];
-  byTicket:Array<string>=[];
+  totalSeatVip:Array<any>=[];
+  byTicket:Array<string>=[]; 
   theater : any ;
   time : any ;
 
@@ -31,8 +31,8 @@ export class TicketPage {
      // console.log(i);
     }
     for(let j=1; j<=6 ;j++){
-      this.totalSeatVip.push(j+"");
-      console.log(j);
+      this.totalSeatVip.push({num:j+"",pic:"vip"});
+     // console.log(j);
     }
    this.theater = navParams.data ;
    console.log(this.theater);
