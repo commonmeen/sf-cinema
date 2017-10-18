@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MovieDetailPage } from '../movie-detail/movie-detail' ;
 import { DataProvider } from '../../providers/data/data' ;
 import { TicketPage } from '../ticket/ticket';
+import { LoadingController } from 'ionic-angular';
 /**
  * Generated class for the ShowTimePage page.
  *
@@ -17,7 +18,7 @@ import { TicketPage } from '../ticket/ticket';
 })
 export class ShowTimePage {
   theater : Array<any> = [] ;
-  movie : any;
+  movie : any; 
   nameTh: string;
   nameEn: string;
   date: string;
@@ -29,18 +30,19 @@ export class ShowTimePage {
   starring: string[];
   plot: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public data:DataProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public data:DataProvider,public loadingCtrl: LoadingController) {
+  	this.presentLoading();
   	this.movie = navParams.data ;
   	this.nameTh = navParams.get("nameTh");
     this.nameEn = navParams.get("nameEn");
     this.date = navParams.get("date");
     this.type = navParams.get("type");
-    this.rate = navParams.get("rate");
+    this.rate = navParams.get("rate"); 
     this.pic = navParams.get("pic");
     this.minutes = navParams.get("minutes");
     this.directed = navParams.get("directed");
     this.starring = navParams.get("starring"); 
-    this.plot = navParams.get("plot");
+    this.plot = navParams.get("plot"); 
     this.theater = data.getTheatre(); 
     console.log(this.movie) ;
 
@@ -54,10 +56,19 @@ export class ShowTimePage {
     this.navCtrl.push(MovieDetailPage,movie) ;
   }
 
-  ticketTapped($event,theater,time:string,showdate:string){  	
+  ticketTapped($event,theater,time:string,showdate:string){  
+  	
   	var i = {name:theater.name,date:showdate,t:time} ;
 	this.navCtrl.push(TicketPage,i) ;
 	//this.navCtrl.push(TicketPage,time) ; 
   }
+
+  presentLoading() {
+    	let loader = this.loadingCtrl.create({
+      		content: "Loading",
+      		duration: 500 
+    	});
+    	loader.present();
+  	}
 
 }

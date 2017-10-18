@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TicketPage } from '../ticket/ticket';
-
+import { LoadingController } from 'ionic-angular';
 /**
  * Generated class for the MovieDetailPage page.
  *
@@ -10,7 +10,7 @@ import { TicketPage } from '../ticket/ticket';
  */
 
 @IonicPage()
-@Component({
+@Component({ 
   selector: 'page-movie-detail',
   templateUrl: 'movie-detail.html',
 })
@@ -27,7 +27,8 @@ export class MovieDetailPage {
   plot: string;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController) {
+    //this.presentLoading() ;
     this.nameTh = navParams.get("nameTh");
     this.nameEn = navParams.get("nameEn");
     this.date = navParams.get("date");
@@ -48,4 +49,11 @@ export class MovieDetailPage {
     this.navCtrl.push(TicketPage,nameTh) ;
   }
 
+  presentLoading() {
+    let loader = this.loadingCtrl.create({
+      content: "Please wait...",
+      duration: 1000
+    });
+    loader.present();
+  }
 }

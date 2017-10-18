@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { DataProvider } from '../../providers/data/data'
+import { DataProvider } from '../../providers/data/data' ;
+import { MovieDetailPage } from '../movie-detail/movie-detail' ; 
 
 /**
  * Generated class for the ComingPage page.
@@ -28,4 +29,7 @@ export class ComingPage {
     console.log('ionViewDidLoad ComingPage');
   }
 
+  movieTapped(event,movie) {
+    this.navCtrl.push(MovieDetailPage,movie) ;
+  }
 }
