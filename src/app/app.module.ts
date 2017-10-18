@@ -2,7 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-
+import { ShowTimePage } from '../pages/show-time/show-time' ;
 import { ShowingPage } from '../pages/showing/showing';
 import { TheaterPage } from '../pages/theater/theater';
 import { ComingPage } from '../pages/coming/coming';
@@ -18,6 +18,7 @@ import { TicketPage } from '../pages/ticket/ticket';
 
 
 
+
 @NgModule({
   declarations: [
     MyApp,
@@ -28,7 +29,9 @@ import { TicketPage } from '../pages/ticket/ticket';
     PromotionDetailPage,
     TabsPage,
     MovieDetailPage,
-    TicketPage
+    TicketPage,
+    ShowTimePage
+
 
   ],
   imports: [
@@ -47,7 +50,9 @@ import { TicketPage } from '../pages/ticket/ticket';
     TabsPage,
     TabsPage,
     MovieDetailPage,
-    TicketPage
+    TicketPage,
+    ShowTimePage 
+
 
   ],
   providers: [

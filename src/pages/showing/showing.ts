@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data' ;
-import { MovieDetailPage } from '../movie-detail/movie-detail' ; 
+// import { MovieDetailPage } from '../movie-detail/movie-detail' ; 
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
 import { PromotionDetailPage } from '../promotion-detail/promotion-detail';
+import { ShowTimePage } from '../show-time/show-time' ;
 /**
  * Generated class for the ShowingPage page.
  *
@@ -22,7 +23,7 @@ export class ShowingPage {
   movies: Array<any> = [];
   promotions : Array<any> = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private data:DataProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public data:DataProvider) {
     this.movies = data.getMovie() ;
     this.promotions = data.getPromotion() ;
   }
@@ -33,7 +34,7 @@ export class ShowingPage {
   }
 
   movieTapped(event,movie) {
-    this.navCtrl.push(MovieDetailPage,movie) ;
+    this.navCtrl.push(ShowTimePage,movie) ;
   }
 
   promoTapped(event,promo) {

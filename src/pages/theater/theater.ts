@@ -22,7 +22,7 @@ export class TheaterPage {
   theaterDetail:Array<any>=[]
 
 
-  constructor(private data: DataProvider, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public data: DataProvider, public navCtrl: NavController, public navParams: NavParams) {
     this.theaterDetail= data.getTheatre() ;
   }
 

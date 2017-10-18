@@ -1,14 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 275:
+/***/ 277:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MorePageModule", function() { return MorePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShowTimePageModule", function() { return ShowTimePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__promotion__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__show_time__ = __webpack_require__(105);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MorePageModule = (function () {
-    function MorePageModule() {
+var ShowTimePageModule = (function () {
+    function ShowTimePageModule() {
     }
-    return MorePageModule;
+    return ShowTimePageModule;
 }());
-MorePageModule = __decorate([
+ShowTimePageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__promotion__["a" /* PromotionPage */],
+            __WEBPACK_IMPORTED_MODULE_2__show_time__["a" /* ShowTimePage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__promotion__["a" /* PromotionPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__show_time__["a" /* ShowTimePage */]),
         ],
     })
-], MorePageModule);
+], ShowTimePageModule);
 
-//# sourceMappingURL=promotion.module.js.map
+//# sourceMappingURL=show-time.module.js.map
 
 /***/ })
 

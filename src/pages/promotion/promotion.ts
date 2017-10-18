@@ -17,7 +17,7 @@ import { PromotionDetailPage } from '../promotion-detail/promotion-detail';
 export class PromotionPage {
 
 	promotions: Array<any> = [];
-	constructor(private data: DataProvider, public navCtrl: NavController, public navParams: NavParams) {
+	constructor(public data: DataProvider, public navCtrl: NavController, public navParams: NavParams) {
 		this.promotions = data.getPromotion();
 	}
 
