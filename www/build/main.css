@@ -25514,7 +25514,6 @@ ion-navbar.toolbar {
 
 page-coming .logo {
   width: 35%;
-  text-align: center;
 }
 
 page-movie-detail .poster {
@@ -25551,7 +25550,8 @@ page-movie-detail .grid {
 }
 
 page-movie-detail .logo {
-  width: 35%;
+  width: 25%;
+  margin: auto;
 }
 
 page-promotion .promotionList {
@@ -25569,7 +25569,8 @@ page-promotion .picMovie {
 }
 
 page-promotion .logo {
-  width: 35%;
+  width: 25%;
+  margin: auto;
 }
 
 page-promotion-detail .promotionDetail {
@@ -25597,7 +25598,8 @@ page-promotion-detail .promotionHeader {
 }
 
 page-promotion-detail .logo {
-  width: 35%;
+  width: 25%;
+  margin: auto;
 }
 
 page-showing .showing {
@@ -25630,10 +25632,6 @@ page-showing .logo {
   margin: auto;
 }
 
-page-showing .title {
-  background-color: #ffffff;
-}
-
 page-showing .body {
   background-color: #F7F7F9;
 }
@@ -25655,5 +25653,6 @@ page-theater .theaterHeader {
 }
 
 page-theater .logo {
-  width: 35%;
+  width: 25%;
+  margin: auto;
 }
