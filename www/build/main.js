@@ -939,15 +939,15 @@ var TicketPage = (function () {
         this.totalSeatVip = [];
         this.byTicket = [];
         for (var i = 1; i <= 84; i++) {
-            this.totalSeat1.push({ num: i + "", pic: "sofa" });
+            this.totalSeat1.push({ num: i, pic: "sofa" });
             // console.log(i);
         }
         for (var i = 85; i <= 168; i++) {
-            this.totalSeat2.push({ num: i + "", pic: "sofa" });
+            this.totalSeat2.push({ num: i, pic: "sofa" });
             // console.log(i);
         }
-        for (var j = 1; j <= 6; j++) {
-            this.totalSeatVip.push({ num: j + "", pic: "vip" });
+        for (var j = 501; j <= 506; j++) {
+            this.totalSeatVip.push({ num: j, pic: "vip" });
             // console.log(j);
         }
         this.theater = navParams.data;
@@ -958,7 +958,12 @@ var TicketPage = (function () {
         console.log('ionViewDidLoad TicketPage');
     };
     TicketPage.prototype.byTickets = function (t) {
-        t.pic = "correct";
+        if (t.pic == "sofa" || t.pic == "vip")
+            t.pic = "correct";
+        else if (t.num < 200)
+            t.pic = "sofa";
+        else
+            t.pic = "vip";
     };
     return TicketPage;
 }());
@@ -966,10 +971,9 @@ TicketPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-ticket',template:/*ion-inline-start:"D:\Project\sf-cinema\src\pages\ticket\ticket.html"*/'<!--\n\n  Generated template for the TicketPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>ticket</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding >\n\n  <div class="header"> {{theater}} </div>\n\n  <ion-grid class="grid">\n\n    <ion-row>\n\n      <ion-col>\n\n        <div class="screen">S C R E E N</div>\n\n      </ion-col>\n\n    </ion-row><br>\n\n    <ion-row >\n\n      <ion-col col-12>\n\n        <img src="pic/{{t1.pic}}.jpg" *ngFor="let t1 of totalSeat1" class="seat" (click)="byTickets(t1)">\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row>\n\n    </ion-row><br>\n\n    <ion-row >\n\n      <ion-col col-12>\n\n        <img src="pic/{{t2.pic}}.jpg" *ngFor="let t2 of totalSeat2" class="seat" (click)="byTickets(t2)">\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row >\n\n        <ion-col style="text-align: center">\n\n          <img src="pic/{{vip.pic}}.jpg" *ngFor="let vip of totalSeatVip" class="vip" (click)="byTickets(vip)">\n\n        </ion-col> \n\n    </ion-row>\n\n\n\n    \n\n    \n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Project\sf-cinema\src\pages\ticket\ticket.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
 ], TicketPage);
 
-var _a, _b;
 //# sourceMappingURL=ticket.js.map
 
 /***/ }),
