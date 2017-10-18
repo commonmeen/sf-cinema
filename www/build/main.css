@@ -25512,8 +25512,38 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-top));
 }
 
+page-coming .showing {
+  font-size: 8pt;
+  color: #4F4F4F;
+  text-align: center;
+  width: 100%;
+  font-family: 'Athiti', sans-serif;
+  font-weight: bold;
+}
+
+page-coming .grid {
+  width: 100%;
+}
+
+page-coming .date {
+  width: 100%;
+  font-size: 4pt;
+  text-align: center;
+  color: #428bca;
+  font-family: 'Athiti', sans-serif;
+}
+
+page-coming .slide {
+  height: 40%;
+}
+
 page-coming .logo {
-  width: 35%;
+  width: 25%;
+  margin: auto;
+}
+
+page-coming .body {
+  background-color: #F7F7F9;
 }
 
 page-movie-detail .poster {
@@ -25552,6 +25582,10 @@ page-movie-detail .grid {
 page-movie-detail .logo {
   width: 25%;
   margin: auto;
+}
+
+page-movie-detail .button {
+  text-align: center;
 }
 
 page-promotion .promotionList {
@@ -25655,4 +25689,25 @@ page-theater .theaterHeader {
 page-theater .logo {
   width: 25%;
   margin: auto;
+}
+
+page-ticket .seat {
+  width: 7%;
+}
+
+page-ticket .screen {
+  font-size: 15pt;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  font-family: 'Athiti', sans-serif;
+  font-weight: bold;
+  background-color: #5bc0de;
+}
+
+page-ticket .vip {
+  width: 10%;
+  margin-right: 5%;
+  margin-bottom: 0px;
+  margin: 6px;
 }

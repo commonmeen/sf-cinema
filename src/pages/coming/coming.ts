@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DataProvider } from '../../providers/data/data'
 
 /**
  * Generated class for the ComingPage page.
@@ -14,8 +15,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'coming.html',
 })
 export class ComingPage {
+  movieComing:Array<any>=[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  constructor(private data:DataProvider, public navCtrl: NavController, public navParams: NavParams) {
+    this.movieComing = data.getMovieComing();
   }
 
   ionViewDidLoad() {

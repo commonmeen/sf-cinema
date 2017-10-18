@@ -14,6 +14,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DataProvider } from '../providers/data/data';
 import { MovieDetailPage } from '../pages/movie-detail/movie-detail' ;
+import { TicketPage } from '../pages/ticket/ticket';
 
 
 
@@ -26,7 +27,8 @@ import { MovieDetailPage } from '../pages/movie-detail/movie-detail' ;
     PromotionPage,
     PromotionDetailPage,
     TabsPage,
-    MovieDetailPage
+    MovieDetailPage,
+    TicketPage
 
   ],
   imports: [
@@ -44,7 +46,8 @@ import { MovieDetailPage } from '../pages/movie-detail/movie-detail' ;
     PromotionDetailPage,
     TabsPage,
     TabsPage,
-    MovieDetailPage
+    MovieDetailPage,
+    TicketPage
 
   ],
   providers: [

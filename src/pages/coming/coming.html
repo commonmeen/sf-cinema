@@ -14,5 +14,13 @@
 
 
 <ion-content padding>
-
+  <ion-grid class="grid">
+    <ion-row >
+      <ion-col *ngFor="let mc of movieComing" col-4 >
+        <img src="pic/{{mc.pic}}" class="picMovie">
+        <div class="date">{{mc.date}}</div> 
+        <div class="showing">{{mc.nameTh}}</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

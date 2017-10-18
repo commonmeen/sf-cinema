@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TicketPage } from '../ticket/ticket';
 
 /**
  * Generated class for the MovieDetailPage page.
@@ -41,6 +42,10 @@ export class MovieDetailPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MovieDetailPage');
+  }
+
+  byTicket(event,nameTh){
+    this.navCtrl.push(TicketPage,nameTh) ;
   }
 
 }
