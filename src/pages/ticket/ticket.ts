@@ -23,15 +23,15 @@ export class TicketPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     for(let i=1; i<=84 ;i++){
-      this.totalSeat1.push({num:i+"",pic:"sofa"}); 
+      this.totalSeat1.push({num:i,pic:"sofa"}); 
      // console.log(i);
     }
     for(let i=85; i<=168 ;i++){
-      this.totalSeat2.push({num:i+"",pic:"sofa"}); 
+      this.totalSeat2.push({num:i,pic:"sofa"}); 
      // console.log(i);
     }
-    for(let j=1; j<=6 ;j++){
-      this.totalSeatVip.push({num:j+"",pic:"vip"});
+    for(let j=501; j<=506 ;j++){
+      this.totalSeatVip.push({num:j,pic:"vip"});
      // console.log(j);
     }
    this.theater = navParams.data ;
@@ -44,7 +44,13 @@ export class TicketPage {
   }
 
   byTickets(t){
-    t.pic = "correct" ;  
+    if (t.pic == "sofa" || t.pic == "vip")
+      t.pic = "correct" ;  
+    else if (t.num < 200)
+      t.pic = "sofa" ;
+    else 
+      t.pic = "vip" ; 
+
   }
 
   

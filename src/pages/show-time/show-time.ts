@@ -41,7 +41,7 @@ export class ShowTimePage {
     this.directed = navParams.get("directed");
     this.starring = navParams.get("starring"); 
     this.plot = navParams.get("plot");
-    this.theater = data.getTheatre();
+    this.theater = data.getTheatre(); 
     console.log(this.movie) ;
 
   }
@@ -54,8 +54,8 @@ export class ShowTimePage {
     this.navCtrl.push(MovieDetailPage,movie) ;
   }
 
-  ticketTapped($event,theater,time:string){  	
-  	var i = theater.name +/* "  " + showdate + */"  " + time ;
+  ticketTapped($event,theater,time:string,showdate:string){  	
+  	var i = {name:theater.name,date:showdate,t:time} ;
 	this.navCtrl.push(TicketPage,i) ;
 	//this.navCtrl.push(TicketPage,time) ; 
   }
