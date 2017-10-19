@@ -39,7 +39,7 @@
   <div class="dateHead">December</div>
   <ion-grid class="grid">
     <ion-row >
-      <ion-col *ngFor="let md of movieComingDecember" col-4 >
+      <ion-col *ngFor="let md of movieComingDecember" col-4 (click)="movieTapped($event,md)">
         <img src="pic/{{md.pic}}" class="picMovie">
         <div class="date">{{md.date}}</div> 
         <div class="showing">{{md.nameTh}}</div>
