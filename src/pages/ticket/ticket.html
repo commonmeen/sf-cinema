@@ -14,7 +14,7 @@
 
 
 <ion-content padding >
-  <div class="header"> {{theater.name}} <br> {{theater.date}} October 2017 - {{theater.t}}</div>
+  <div class="header">{{nowSeat}} {{theater.name}} <br> {{theater.date}} October 2017 - {{theater.t}}</div>
   <ion-grid class="grid">
     <ion-row>
       <ion-col>
@@ -38,8 +38,16 @@
           <img src="pic/{{vip.pic}}.jpg" *ngFor="let vip of totalSeatVip" class="vip" (click)="byTickets(vip)">
         </ion-col> 
     </ion-row>
-
-    
-    
   </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-7 class="totalHead">Selected seat : <span *ngFor="let t of nowSeat" class="total">{{t}}, </span></ion-col>
+      <ion-col col-5 class="totalHead">ราคา : <span class="total">{{price}} บาท </span></ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+  
+  
+  
 </ion-content>

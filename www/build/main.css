@@ -25766,3 +25766,17 @@ page-ticket .logo {
   width: 25%;
   margin: auto;
 }
+
+page-ticket .total {
+  font-size: 10pt;
+  font-weight: bold;
+  color: #4F4F4F;
+  font-family: 'Athiti', sans-serif;
+}
+
+page-ticket .totalHead {
+  font-size: 12pt;
+  font-weight: bold;
+  color: #5bc0de;
+  font-family: 'Athiti', sans-serif;
+}
