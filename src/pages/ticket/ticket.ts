@@ -88,7 +88,7 @@ export class TicketPage {
       this.nowSeat.splice(x2,x2);
       }
     if (x2==0){
-      this.nowSeat.splice(x2,1);}
+      this.nowSeat.splice(x2,1);} 
       console.log(x2);
     }
     

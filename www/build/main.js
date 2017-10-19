@@ -52,15 +52,69 @@ ComingPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-coming',template:/*ion-inline-start:"D:\sf-cinema\src\pages\coming\coming.html"*/'<!--\n\n  Generated template for the ComingPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <div class="dateHead">October</div>\n\n  <ion-grid class="grid">\n\n    <ion-row >\n\n      <ion-col *ngFor="let mc of movieComingOctober" col-4 (click)="movieTapped($event,mc)">\n\n        <img src="pic/{{mc.pic}}" class="picMovie">\n\n        <div class="date">{{mc.date}}</div> \n\n        <div class="showing">{{mc.nameTh}}</div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n\n\n  <div class="dateHead">November</div>\n\n  <ion-grid class="grid">\n\n    <ion-row >\n\n      <ion-col *ngFor="let mn of movieComingNovember" col-4 (click)="movieTapped($event,mn)">\n\n        <img src="pic/{{mn.pic}}" class="picMovie">\n\n        <div class="date">{{mn.date}}</div> \n\n        <div class="showing">{{mn.nameTh}}</div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n\n\n  <div class="dateHead">December</div>\n\n  <ion-grid class="grid">\n\n    <ion-row >\n\n      <ion-col *ngFor="let md of movieComingDecember" col-4 >\n\n        <img src="pic/{{md.pic}}" class="picMovie">\n\n        <div class="date">{{md.date}}</div> \n\n        <div class="showing">{{md.nameTh}}</div>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\sf-cinema\src\pages\coming\coming.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__providers_data_data__["a" /* DataProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_data_data__["a" /* DataProvider */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_data_data__["a" /* DataProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], ComingPage);
 
-var _a, _b, _c;
 //# sourceMappingURL=coming.js.map
 
 /***/ }),
 
 /***/ 104:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PromotionPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_data_data__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__promotion_detail_promotion_detail__ = __webpack_require__(53);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the PromotionPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var PromotionPage = (function () {
+    function PromotionPage(data, navCtrl, navParams) {
+        this.data = data;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.promotions = [];
+        this.promotions = data.getPromotion();
+    }
+    PromotionPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad PromotionPage');
+    };
+    PromotionPage.prototype.showTheaterDetail = function (promotion) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__promotion_detail_promotion_detail__["a" /* PromotionDetailPage */], { 'promotionDetail': promotion });
+    };
+    return PromotionPage;
+}());
+PromotionPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-promotion',template:/*ion-inline-start:"D:\sf-cinema\src\pages\promotion\promotion.html"*/'<!--\n\n  Generated template for the MorePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-grid class="grid">\n\n    <ion-row col-12>\n\n      <ion-col *ngFor="let p of promotions" class="promotionList" col-6 (click)="showTheaterDetail(p)">\n\n        <img src="pic/{{p.pic}}" class="picMovie" >\n\n        {{p.subname}} <br>\n\n       \n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"D:\sf-cinema\src\pages\promotion\promotion.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_data_data__["a" /* DataProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+], PromotionPage);
+
+//# sourceMappingURL=promotion.js.map
+
+/***/ }),
+
+/***/ 105:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -144,7 +198,7 @@ ShowTimePage = __decorate([
 
 /***/ }),
 
-/***/ 105:
+/***/ 106:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -153,7 +207,7 @@ ShowTimePage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_data_data__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__promotion_detail_promotion_detail__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__show_time_show_time__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__show_time_show_time__ = __webpack_require__(105);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -215,7 +269,7 @@ ShowingPage = __decorate([
 
 /***/ }),
 
-/***/ 106:
+/***/ 107:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -265,61 +319,6 @@ TheaterPage = __decorate([
 
 /***/ }),
 
-/***/ 107:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PromotionPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_data_data__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__promotion_detail_promotion_detail__ = __webpack_require__(53);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/**
- * Generated class for the PromotionPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var PromotionPage = (function () {
-    function PromotionPage(data, navCtrl, navParams) {
-        this.data = data;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.promotions = [];
-        this.promotions = data.getPromotion();
-    }
-    PromotionPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad PromotionPage');
-    };
-    PromotionPage.prototype.showTheaterDetail = function (promotion) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__promotion_detail_promotion_detail__["a" /* PromotionDetailPage */], { 'promotionDetail': promotion });
-    };
-    return PromotionPage;
-}());
-PromotionPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-promotion',template:/*ion-inline-start:"D:\sf-cinema\src\pages\promotion\promotion.html"*/'<!--\n\n  Generated template for the MorePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-grid class="grid">\n\n    <ion-row col-12>\n\n      <ion-col *ngFor="let p of promotions" class="promotionList" col-6 (click)="showTheaterDetail(p)">\n\n        <img src="pic/{{p.pic}}" class="picMovie" >\n\n        {{p.subname}} <br>\n\n       \n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"D:\sf-cinema\src\pages\promotion\promotion.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_data_data__["a" /* DataProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-], PromotionPage);
-
-//# sourceMappingURL=promotion.js.map
-
-/***/ }),
-
 /***/ 116:
 /***/ (function(module, exports) {
 
@@ -354,15 +353,15 @@ var map = {
 		5
 	],
 	"../pages/promotion/promotion.module": [
-		280,
+		276,
 		4
 	],
 	"../pages/show-time/show-time.module": [
-		276,
+		277,
 		3
 	],
 	"../pages/showing/showing.module": [
-		277,
+		278,
 		2
 	],
 	"../pages/theater/theater.module": [
@@ -370,7 +369,7 @@ var map = {
 		1
 	],
 	"../pages/ticket/ticket.module": [
-		278,
+		280,
 		0
 	]
 };
@@ -396,10 +395,10 @@ module.exports = webpackAsyncContext;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__showing_showing__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__theater_theater__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__showing_showing__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__theater_theater__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__coming_coming__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__promotion_promotion__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__promotion_promotion__ = __webpack_require__(104);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -456,11 +455,11 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(264);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_show_time_show_time__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_showing_showing__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_theater_theater__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_show_time_show_time__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_showing_showing__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_theater_theater__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_coming_coming__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_promotion_promotion__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_promotion_promotion__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_promotion_detail_promotion_detail__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_tabs_tabs__ = __webpack_require__(203);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_http__ = __webpack_require__(159);
@@ -519,11 +518,11 @@ AppModule = __decorate([
                     { loadChildren: '../pages/coming/coming.module#ComingPageModule', name: 'ComingPage', segment: 'coming', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/movie-detail/movie-detail.module#MovieDetailPageModule', name: 'MovieDetailPage', segment: 'movie-detail', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/promotion-detail/promotion-detail.module#PromotionDetailPageModule', name: 'PromotionDetailPage', segment: 'promotion-detail', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/promotion/promotion.module#MorePageModule', name: 'PromotionPage', segment: 'promotion', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/show-time/show-time.module#ShowTimePageModule', name: 'ShowTimePage', segment: 'show-time', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/showing/showing.module#ShowingPageModule', name: 'ShowingPage', segment: 'showing', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/ticket/ticket.module#TicketPageModule', name: 'TicketPage', segment: 'ticket', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/theater/theater.module#TheaterPageModule', name: 'TheaterPage', segment: 'theater', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/promotion/promotion.module#MorePageModule', name: 'PromotionPage', segment: 'promotion', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/ticket/ticket.module#TicketPageModule', name: 'TicketPage', segment: 'ticket', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -1157,10 +1156,9 @@ TicketPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-ticket',template:/*ion-inline-start:"D:\sf-cinema\src\pages\ticket\ticket.html"*/'<!--\n\n  Generated template for the TicketPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding >\n\n  <div class="header">{{nowSeat}} {{theater.name}} <br> {{theater.date}} October 2017 - {{theater.t}}</div>\n\n  <ion-grid class="grid">\n\n    <ion-row>\n\n      <ion-col>\n\n        <div class="screen">S C R E E N</div>\n\n      </ion-col>\n\n    </ion-row><br>\n\n    <ion-row >\n\n      <ion-col col-12>\n\n        <img src="pic/{{t1.pic}}.jpg" *ngFor="let t1 of totalSeat1" class="seat" (click)="byTickets(t1)">\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row>\n\n    </ion-row><br>\n\n    <ion-row >\n\n      <ion-col col-12>\n\n        <img src="pic/{{t2.pic}}.jpg" *ngFor="let t2 of totalSeat2" class="seat" (click)="byTickets(t2)">\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row >\n\n        <ion-col style="text-align: center">\n\n          <img src="pic/{{vip.pic}}.jpg" *ngFor="let vip of totalSeatVip" class="vip" (click)="byTickets(vip)">\n\n        </ion-col> \n\n    </ion-row>\n\n  </ion-grid>\n\n  <ion-grid>\n\n    <ion-row>\n\n      <ion-col col-7 class="totalHead">Selected seat : <span *ngFor="let t of nowSeat" class="total">{{t}}, </span></ion-col>\n\n      <ion-col col-5 class="totalHead">ราคา : <span class="total">{{price}} บาท </span></ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n  \n\n\n\n  \n\n  \n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"D:\sf-cinema\src\pages\ticket\ticket.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]])
 ], TicketPage);
 
-var _a, _b, _c, _d;
 //# sourceMappingURL=ticket.js.map
 
 /***/ }),
