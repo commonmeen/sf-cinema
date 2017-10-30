@@ -14,6 +14,9 @@
 
 
 <ion-content padding >
+  <ion-fab right bottom>
+    <button ion-fab mini color="secondary" (click)="scrShot()"><ion-icon name="image"></ion-icon></button>
+  </ion-fab>
   <div class="header">{{nowSeat}} {{theater.name}} <br> {{theater.date}} October 2017 - {{theater.t}}</div>
   <ion-grid class="grid">
     <ion-row>

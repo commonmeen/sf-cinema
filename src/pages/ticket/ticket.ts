@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
+import { Screenshot } from '@ionic-native/screenshot';
 /**
  * Generated class for the TicketPage page.
  *
@@ -23,8 +24,9 @@ export class TicketPage {
   time : any ;
   price : number = 0 ;
   nowSeat : Array<number>=[] ;
+  sc : Screenshot ;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController,public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController,public toastCtrl: ToastController,private screenshot: Screenshot) {
     this.presentLoading() ;
     for(let i=1; i<=84 ;i++){
       this.totalSeat1.push({num:i,pic:"sofa"}); 
@@ -41,6 +43,7 @@ export class TicketPage {
    this.theater = navParams.data ;
    console.log(this.theater);
     //this.time = navParams.get("time");
+    this.sc = screenshot ;
   }
 
   ionViewDidLoad() {
@@ -101,7 +104,9 @@ export class TicketPage {
     });
     loader.present();
   }
+
+  scrShot() :void {
+    this.sc.save('jpg', 80, '123.jpg')
+    return ;
+  }
 }
-
-
-
