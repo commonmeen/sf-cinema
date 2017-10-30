@@ -86,4 +86,6 @@
     <engine name="android" spec="~6.2.3" />
     <plugin name="com.darktalker.cordova.screenshot" spec="^0.1.6" />
     <plugin name="de.appplant.cordova.plugin.local-notification" spec="^0.8.5" />
+    <preference name="YouTubeDataApiKey" value="AIzaSyDarEk5TwccyixIh15rvgv33AnAbgxTNfI" />
+    <plugin name="cordova-plugin-youtube-video-player" spec="^1.0.6" />
 </widget>

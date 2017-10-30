@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TicketPage } from '../ticket/ticket';
 import { LoadingController } from 'ionic-angular';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 /**
  * Generated class for the MovieDetailPage page.
  *
@@ -27,7 +28,7 @@ export class MovieDetailPage {
   plot: string;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController,public youtube: YoutubeVideoPlayer) {
     //this.presentLoading() ;
     this.nameTh = navParams.get("nameTh");
     this.nameEn = navParams.get("nameEn");

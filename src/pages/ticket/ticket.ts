@@ -27,7 +27,7 @@ export class TicketPage {
   price : number = 0 ;
   nowSeat : Array<number>=[] ;
   sc : Screenshot ;
-  noti : LocalNotifications ;
+  notif : LocalNotifications ;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController,
    public toastCtrl: ToastController,public screenshot: Screenshot,public localNoti: LocalNotifications) {
@@ -48,7 +48,7 @@ export class TicketPage {
    console.log(this.theater);
     //this.time = navParams.get("time");
     this.sc = screenshot ;
-    this.noti = localNoti ;
+    this.notif = localNoti ;
   }
 
   ionViewDidLoad() {
@@ -115,11 +115,11 @@ export class TicketPage {
   }
 
   noti(number) : void {
-    this.localNotifications.schedule({
+    this.notif.schedule({
       id: number,
-      text: 'You buy ticket' + nowSeat.length + 'seats.',
-      sound: isAndroid? 'file://sound.mp3': 'file://beep.caf',
-      data: { secret: key }
+      text: 'You buy ticket'
+      //sound: isAndroid? 'file://sound.mp3': 'file://beep.caf',
+      //data: { secret: key }
     });
   } 
 } 

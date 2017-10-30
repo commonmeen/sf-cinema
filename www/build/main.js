@@ -341,11 +341,11 @@ webpackEmptyAsyncContext.id = 117;
 
 var map = {
 	"../pages/coming/coming.module": [
-		275,
+		276,
 		7
 	],
 	"../pages/movie-detail/movie-detail.module": [
-		276,
+		283,
 		6
 	],
 	"../pages/promotion-detail/promotion-detail.module": [
@@ -389,7 +389,7 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 205:
+/***/ 206:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -432,13 +432,13 @@ TabsPage = __decorate([
 
 /***/ }),
 
-/***/ 206:
+/***/ 207:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(226);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -446,7 +446,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 225:
+/***/ 226:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -454,28 +454,30 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(275);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_show_time_show_time__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_showing_showing__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_theater_theater__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_coming_coming__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_promotion_promotion__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_promotion_detail_promotion_detail__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_tabs_tabs__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_tabs_tabs__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_http__ = __webpack_require__(160);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_status_bar__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_splash_screen__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_status_bar__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_splash_screen__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_data_data__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_movie_detail_movie_detail__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_ticket_ticket__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_screenshot__ = __webpack_require__(161);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_local_notifications__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_youtube_video_player__ = __webpack_require__(164);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -520,13 +522,13 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                 links: [
                     { loadChildren: '../pages/coming/coming.module#ComingPageModule', name: 'ComingPage', segment: 'coming', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/movie-detail/movie-detail.module#MovieDetailPageModule', name: 'MovieDetailPage', segment: 'movie-detail', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/promotion-detail/promotion-detail.module#PromotionDetailPageModule', name: 'PromotionDetailPage', segment: 'promotion-detail', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/promotion/promotion.module#MorePageModule', name: 'PromotionPage', segment: 'promotion', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/show-time/show-time.module#ShowTimePageModule', name: 'ShowTimePage', segment: 'show-time', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/showing/showing.module#ShowingPageModule', name: 'ShowingPage', segment: 'showing', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/theater/theater.module#TheaterPageModule', name: 'TheaterPage', segment: 'theater', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/ticket/ticket.module#TicketPageModule', name: 'TicketPage', segment: 'ticket', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/ticket/ticket.module#TicketPageModule', name: 'TicketPage', segment: 'ticket', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/movie-detail/movie-detail.module#MovieDetailPageModule', name: 'MovieDetailPage', segment: 'movie-detail', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -550,7 +552,8 @@ AppModule = __decorate([
             { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
             __WEBPACK_IMPORTED_MODULE_14__providers_data_data__["a" /* DataProvider */],
             __WEBPACK_IMPORTED_MODULE_17__ionic_native_screenshot__["a" /* Screenshot */],
-            __WEBPACK_IMPORTED_MODULE_18__ionic_native_local_notifications__["a" /* LocalNotifications */]
+            __WEBPACK_IMPORTED_MODULE_18__ionic_native_local_notifications__["a" /* LocalNotifications */],
+            __WEBPACK_IMPORTED_MODULE_19__ionic_native_youtube_video_player__["a" /* YoutubeVideoPlayer */]
         ]
     })
 ], AppModule);
@@ -559,16 +562,16 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 274:
+/***/ 275:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(206);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -612,7 +615,7 @@ MyApp = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(160);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(248);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(249);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -981,6 +984,7 @@ DataProvider = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ticket_ticket__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_youtube_video_player__ = __webpack_require__(164);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -994,6 +998,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Generated class for the MovieDetailPage page.
  *
@@ -1001,10 +1006,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var MovieDetailPage = (function () {
-    function MovieDetailPage(navCtrl, navParams, loadingCtrl) {
+    function MovieDetailPage(navCtrl, navParams, loadingCtrl, youtube) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.loadingCtrl = loadingCtrl;
+        this.youtube = youtube;
         //this.presentLoading() ;
         this.nameTh = navParams.get("nameTh");
         this.nameEn = navParams.get("nameEn");
@@ -1034,9 +1040,9 @@ var MovieDetailPage = (function () {
 }());
 MovieDetailPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-movie-detail',template:/*ion-inline-start:"D:\Project\sf-cinema\src\pages\movie-detail\movie-detail.html"*/'<!--\n\n  Generated template for the MovieDetailPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <div >\n\n			<ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n		</div>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n	<img class="poster" src="pic/{{pic}}"><br>\n\n	<!-- <div style="text-align: center" (click)="byTicket($event,nameTh)">\n\n		<button ion-button >By Ticket</button>\n\n	</div> -->\n\n	<ion-grid class="gird">\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">ชื่อเรื่อง: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{nameTh}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">ประเภท: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{type}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">วันที่เข้าฉาย: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{date}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">เรท: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{rate}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">เวลา: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{minutes}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">ผู้กำกับ: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{directed}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">นักแสดง: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{starring}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">เรื่องย่อ: </ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col class="posterDetail">{{plot}}</ion-col>\n\n		</ion-row>\n\n	</ion-grid>\n\n	\n\n	\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Project\sf-cinema\src\pages\movie-detail\movie-detail.html"*/,
+        selector: 'page-movie-detail',template:/*ion-inline-start:"D:\Project\sf-cinema\src\pages\movie-detail\movie-detail.html"*/'<!--\n\n  Generated template for the MovieDetailPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <div >\n\n			<ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n		</div>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n	<img class="poster" src="pic/{{pic}}"><br>\n\n	<!-- <div style="text-align: center" (click)="byTicket($event,nameTh)">\n\n		<button ion-button >By Ticket</button>\n\n	</div> -->\n\n	<ion-grid class="gird">\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">ชื่อเรื่อง: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{nameTh}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">ประเภท: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{type}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">วันที่เข้าฉาย: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{date}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">เรท: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{rate}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">เวลา: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{minutes}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">ผู้กำกับ: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{directed}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">นักแสดง: </ion-col>\n\n			<ion-col col-8 class="posterDetail">{{starring}}</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col col-4 class="posterDetailHeader">เรื่องย่อ: </ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col class="posterDetail">{{plot}}</ion-col>\n\n		</ion-row>\n\n	</ion-grid>\n\n	\n\n	<button ion-button (click)="teaser" color="primary"> Watch Official Trailer </button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Project\sf-cinema\src\pages\movie-detail\movie-detail.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_youtube_video_player__["a" /* YoutubeVideoPlayer */]])
 ], MovieDetailPage);
 
 //# sourceMappingURL=movie-detail.js.map
@@ -1104,7 +1110,7 @@ var TicketPage = (function () {
         console.log(this.theater);
         //this.time = navParams.get("time");
         this.sc = screenshot;
-        this.noti = localNoti;
+        this.notif = localNoti;
     }
     TicketPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad TicketPage');
@@ -1168,11 +1174,11 @@ var TicketPage = (function () {
         this.sc.save('jpg', 80, '123.jpg');
     };
     TicketPage.prototype.noti = function (number) {
-        this.localNotifications.schedule({
+        this.notif.schedule({
             id: number,
-            text: 'You buy ticket' + nowSeat.length + 'seats.',
-            sound: isAndroid ? 'file://sound.mp3' : 'file://beep.caf',
-            data: { secret: key }
+            text: 'You buy ticket'
+            //sound: isAndroid? 'file://sound.mp3': 'file://beep.caf',
+            //data: { secret: key }
         });
     };
     return TicketPage;
@@ -1181,10 +1187,10 @@ TicketPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-ticket',template:/*ion-inline-start:"D:\Project\sf-cinema\src\pages\ticket\ticket.html"*/'<!--\n\n  Generated template for the TicketPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title ><img src="pic/sf.png" class="logo"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding >\n\n  <ion-fab right bottom>\n\n    <button ion-fab mini color="secondary" (click)="scrShot()"><ion-icon name="image"></ion-icon></button>\n\n  </ion-fab>\n\n  <div class="header">{{nowSeat}} {{theater.name}} <br> {{theater.date}} October 2017 - {{theater.t}}</div>\n\n  <ion-grid class="grid">\n\n    <ion-row>\n\n      <ion-col>\n\n        <div class="screen">S C R E E N</div>\n\n      </ion-col>\n\n    </ion-row><br>\n\n    <ion-row >\n\n      <ion-col col-12>\n\n        <img src="pic/{{t1.pic}}.jpg" *ngFor="let t1 of totalSeat1" class="seat" (click)="byTickets(t1)">\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row>\n\n    </ion-row><br>\n\n    <ion-row >\n\n      <ion-col col-12>\n\n        <img src="pic/{{t2.pic}}.jpg" *ngFor="let t2 of totalSeat2" class="seat" (click)="byTickets(t2)">\n\n      </ion-col>\n\n    </ion-row>\n\n    <ion-row >\n\n        <ion-col style="text-align: center">\n\n          <img src="pic/{{vip.pic}}.jpg" *ngFor="let vip of totalSeatVip" class="vip" (click)="byTickets(vip)">\n\n        </ion-col> \n\n    </ion-row>\n\n  </ion-grid>\n\n  <ion-grid>\n\n    <ion-row>\n\n      <ion-col col-7 class="totalHead">Selected seat : <span *ngFor="let t of nowSeat" class="total">{{t}}, </span></ion-col>\n\n      <ion-col col-5 class="totalHead">ราคา : <span class="total">{{price}} บาท </span></ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n  <button ion-button color="primary" (click)="noti(1)"> Buy Ticket </button>\n\n\n\n  \n\n  \n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"D:\Project\sf-cinema\src\pages\ticket\ticket.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_screenshot__["a" /* Screenshot */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_screenshot__["a" /* Screenshot */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_local_notifications__["a" /* LocalNotifications */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_local_notifications__["a" /* LocalNotifications */]) === "function" && _f || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_screenshot__["a" /* Screenshot */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_local_notifications__["a" /* LocalNotifications */]])
 ], TicketPage);
 
-var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=ticket.js.map
 
 /***/ }),
@@ -1235,5 +1241,5 @@ PromotionDetailPage = __decorate([
 
 /***/ })
 
-},[206]);
+},[207]);
 //# sourceMappingURL=main.js.map

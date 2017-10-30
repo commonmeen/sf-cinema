@@ -17,7 +17,7 @@ import { MovieDetailPage } from '../pages/movie-detail/movie-detail' ;
 import { TicketPage } from '../pages/ticket/ticket';
 import { Screenshot } from '@ionic-native/screenshot';
 import { LocalNotifications } from '@ionic-native/local-notifications';
-
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 
 
 @NgModule({
@@ -64,7 +64,8 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DataProvider,
     Screenshot,
-   LocalNotifications
+   LocalNotifications,
+   YoutubeVideoPlayer
   ]
 })
 export class AppModule {}
