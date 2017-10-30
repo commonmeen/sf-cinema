@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
+import { LocalNotifications } from '@ionic-native/local-notifications';
+
 /**
  * Generated class for the TicketPage page.
  *
@@ -25,8 +27,10 @@ export class TicketPage {
   price : number = 0 ;
   nowSeat : Array<number>=[] ;
   sc : Screenshot ;
+  noti : LocalNotifications ;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController,public toastCtrl: ToastController,private screenshot: Screenshot) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController,
+   public toastCtrl: ToastController,public screenshot: Screenshot,public localNoti: LocalNotifications) {
     this.presentLoading() ;
     for(let i=1; i<=84 ;i++){
       this.totalSeat1.push({num:i,pic:"sofa"}); 
@@ -44,6 +48,7 @@ export class TicketPage {
    console.log(this.theater);
     //this.time = navParams.get("time");
     this.sc = screenshot ;
+    this.noti = localNoti ;
   }
 
   ionViewDidLoad() {
@@ -106,7 +111,15 @@ export class TicketPage {
   }
 
   scrShot() :void {
-    this.sc.save('jpg', 80, '123.jpg')
-    return ;
+    this.sc.save('jpg', 80, '123.jpg') ;
   }
-}
+
+  noti(number) : void {
+    this.localNotifications.schedule({
+      id: number,
+      text: 'You buy ticket' + nowSeat.length + 'seats.',
+      sound: isAndroid? 'file://sound.mp3': 'file://beep.caf',
+      data: { secret: key }
+    });
+  } 
+} 

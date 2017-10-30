@@ -16,7 +16,7 @@ import { DataProvider } from '../providers/data/data';
 import { MovieDetailPage } from '../pages/movie-detail/movie-detail' ;
 import { TicketPage } from '../pages/ticket/ticket';
 import { Screenshot } from '@ionic-native/screenshot';
-
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 
 
@@ -63,8 +63,8 @@ import { Screenshot } from '@ionic-native/screenshot';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DataProvider,
-    Screenshot
- 
+    Screenshot,
+   LocalNotifications
   ]
 })
 export class AppModule {}
