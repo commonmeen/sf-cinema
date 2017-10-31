@@ -4,6 +4,8 @@ import { MovieDetailPage } from '../movie-detail/movie-detail' ;
 import { DataProvider } from '../../providers/data/data' ;
 import { TicketPage } from '../ticket/ticket';
 import { LoadingController } from 'ionic-angular';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+
 /**
  * Generated class for the ShowTimePage page.
  *
@@ -30,7 +32,7 @@ export class ShowTimePage {
   starring: string[];
   plot: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public data:DataProvider,public loadingCtrl: LoadingController) {
+  constructor(public youtube: YoutubeVideoPlayer,public navCtrl: NavController, public navParams: NavParams, public data:DataProvider,public loadingCtrl: LoadingController) {
   	this.presentLoading();
   	this.movie = navParams.data ;
   	this.nameTh = navParams.get("nameTh");
@@ -71,4 +73,7 @@ export class ShowTimePage {
     	loader.present();
   	}
 
+  teaser() {
+    this.youtube.openVideo('xZOPffdfzAI');
+  }
 }

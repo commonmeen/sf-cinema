@@ -28,6 +28,7 @@ export class TicketPage {
   nowSeat : Array<number>=[] ;
   sc : Screenshot ;
   notif : LocalNotifications ;
+  isAndroid : boolean = true ;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController,
    public toastCtrl: ToastController,public screenshot: Screenshot,public localNoti: LocalNotifications) {

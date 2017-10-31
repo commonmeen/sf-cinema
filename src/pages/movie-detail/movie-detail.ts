@@ -57,4 +57,8 @@ export class MovieDetailPage {
     });
     loader.present();
   }
+
+  teaser() {
+    this.youtube.openVideo('xZOPffdfzAI');
+  }
 }

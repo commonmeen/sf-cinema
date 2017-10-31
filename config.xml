@@ -88,4 +88,13 @@
     <plugin name="de.appplant.cordova.plugin.local-notification" spec="^0.8.5" />
     <preference name="YouTubeDataApiKey" value="AIzaSyDarEk5TwccyixIh15rvgv33AnAbgxTNfI" />
     <plugin name="cordova-plugin-youtube-video-player" spec="^1.0.6" />
+    <plugin name="cordova-plugin-crosswalk-webview" spec="^2.3.0">
+        <variable name="XWALK_VERSION" value="23+" />
+        <variable name="XWALK_LITEVERSION" value="xwalk_core_library_canary:17+" />
+        <variable name="XWALK_COMMANDLINE" value="--disable-pull-to-refresh-effect" />
+        <variable name="XWALK_MODE" value="embedded" />
+        <variable name="XWALK_MULTIPLEAPK" value="true" />
+    </plugin>
+    <allow-navigation href="http://192.168.150.2:8100" />
+    <allow-navigation href="http://192.168.56.1:8100" />
 </widget>
