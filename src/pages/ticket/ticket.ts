@@ -63,7 +63,7 @@ export class TicketPage {
       this.nowSeat.push(t.num) ;
       const toast = this.toastCtrl.create({
         message: 'You add normal seat (160.-)',
-        duration: 1500,
+        duration: 2500,
         position: 'bottom' 
       });
       toast.present();
@@ -74,7 +74,7 @@ export class TicketPage {
       this.nowSeat.push(t.num) ;
       const toast = this.toastCtrl.create({
         message: 'You add VIP seat (220.-)',
-        duration: 2000,
+        duration: 2500,
         position: 'bottom'
       });
       toast.present();
@@ -112,15 +112,22 @@ export class TicketPage {
   }
 
   scrShot() :void {
-    this.sc.save('jpg', 80, '123.jpg') ;
+    const t = this.theater.name + ' ' + this.theater.date + ' Oct 2017 ' +this.theater.t ;
+    this.sc.save('jpg', 80, t) ;
+    const toast = this.toastCtrl.create({
+        message: 'Capture Screen Completed',
+        duration: 2000,
+        position: 'top'
+    });
+    toast.present();
   }
 
-  noti(number) : void {
-    this.notif.schedule({
-      id: number,
-      text: 'You buy ticket'
-      //sound: isAndroid? 'file://sound.mp3': 'file://beep.caf',
-      //data: { secret: key }
-    });
+  noti(number) : void { 
+    const t = 'You paid ' + this.price + ' baht for buy ticket.';
+     this.notif.schedule({
+       id: number,
+       text: t,
+       sound: this.isAndroid? 'res://platform_default': 'res://platform_default'
+     });
   } 
 } 

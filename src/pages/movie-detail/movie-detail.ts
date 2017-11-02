@@ -59,6 +59,6 @@ export class MovieDetailPage {
   }
 
   teaser() {
-    this.youtube.openVideo('xZOPffdfzAI');
+    this.youtube.openVideo('EuOlYPSEzSc');
   }
 }

@@ -189,7 +189,7 @@ var ShowTimePage = (function () {
         loader.present();
     };
     ShowTimePage.prototype.teaser = function () {
-        this.youtube.openVideo('xZOPffdfzAI');
+        this.youtube.openVideo('EuOlYPSEzSc');
     };
     return ShowTimePage;
 }());
@@ -1043,7 +1043,7 @@ var MovieDetailPage = (function () {
         loader.present();
     };
     MovieDetailPage.prototype.teaser = function () {
-        this.youtube.openVideo('xZOPffdfzAI');
+        this.youtube.openVideo('EuOlYPSEzSc');
     };
     return MovieDetailPage;
 }());
@@ -1132,7 +1132,7 @@ var TicketPage = (function () {
             this.nowSeat.push(t.num);
             var toast = this.toastCtrl.create({
                 message: 'You add normal seat (160.-)',
-                duration: 1500,
+                duration: 2500,
                 position: 'bottom'
             });
             toast.present();
@@ -1143,7 +1143,7 @@ var TicketPage = (function () {
             this.nowSeat.push(t.num);
             var toast = this.toastCtrl.create({
                 message: 'You add VIP seat (220.-)',
-                duration: 2000,
+                duration: 2500,
                 position: 'bottom'
             });
             toast.present();
@@ -1181,14 +1181,21 @@ var TicketPage = (function () {
         loader.present();
     };
     TicketPage.prototype.scrShot = function () {
-        this.sc.save('jpg', 80, '123.jpg');
+        var t = this.theater.name + ' ' + this.theater.date + ' Oct 2017 ' + this.theater.t;
+        this.sc.save('jpg', 80, t);
+        var toast = this.toastCtrl.create({
+            message: 'Capture Screen Completed',
+            duration: 2000,
+            position: 'top'
+        });
+        toast.present();
     };
     TicketPage.prototype.noti = function (number) {
+        var t = 'You paid ' + this.price + ' baht for buy ticket.';
         this.notif.schedule({
             id: number,
-            text: 'You buy ticket'
-            //sound: isAndroid? 'file://sound.mp3': 'file://beep.caf',
-            //data: { secret: key }
+            text: t,
+            sound: this.isAndroid ? 'res://platform_default' : 'res://platform_default'
         });
     };
     return TicketPage;

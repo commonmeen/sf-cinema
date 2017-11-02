@@ -74,6 +74,6 @@ export class ShowTimePage {
   	}
 
   teaser() {
-    this.youtube.openVideo('xZOPffdfzAI');
+    this.youtube.openVideo('EuOlYPSEzSc');
   }
 }
